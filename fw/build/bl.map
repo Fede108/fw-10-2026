@@ -1,63 +1,27 @@
-Archive member included to satisfy reference by file (symbol)
-
-/usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
-                              /tmp/ccGAYxJO.o (__udivsi3)
 
 Discarded input sections
 
- .text          0x00000000        0x0 /tmp/ccdr9rkJ.o
- .data          0x00000000        0x0 /tmp/ccdr9rkJ.o
- .bss           0x00000000        0x0 /tmp/ccdr9rkJ.o
- .text          0x00000000        0x0 /tmp/ccSxR6uQ.o
- .data          0x00000000        0x0 /tmp/ccSxR6uQ.o
- .bss           0x00000000        0x0 /tmp/ccSxR6uQ.o
- .text.bl_log_hex
-                0x00000000      0x124 /tmp/ccSxR6uQ.o
- .text.bl_fail  0x00000000       0x20 /tmp/ccSxR6uQ.o
- .text          0x00000000        0x0 /tmp/ccGAYxJO.o
- .data          0x00000000        0x0 /tmp/ccGAYxJO.o
- .bss           0x00000000        0x0 /tmp/ccGAYxJO.o
+ .text          0x00000000        0x0 /tmp/cci8duq2.o
+ .data          0x00000000        0x0 /tmp/cci8duq2.o
+ .bss           0x00000000        0x0 /tmp/cci8duq2.o
+ .text          0x00000000        0x0 /tmp/ccpzIah3.o
+ .data          0x00000000        0x0 /tmp/ccpzIah3.o
+ .bss           0x00000000        0x0 /tmp/ccpzIah3.o
+ .text          0x00000000        0x0 /tmp/ccbeP4ys.o
+ .data          0x00000000        0x0 /tmp/ccbeP4ys.o
+ .bss           0x00000000        0x0 /tmp/ccbeP4ys.o
  .text.print_chr
-                0x00000000       0x40 /tmp/ccGAYxJO.o
+                0x00000000       0x40 /tmp/ccbeP4ys.o
  .text.print_dec
-                0x00000000       0xf0 /tmp/ccGAYxJO.o
- .rodata        0x00000000       0x11 /tmp/ccGAYxJO.o
+                0x00000000       0xd4 /tmp/ccbeP4ys.o
+ .rodata        0x00000000       0x11 /tmp/ccbeP4ys.o
  .text.print_hex
-                0x00000000       0xb8 /tmp/ccGAYxJO.o
+                0x00000000       0xb8 /tmp/ccbeP4ys.o
  .text.print_flush_buffer
-                0x00000000       0x1c /tmp/ccGAYxJO.o
- .text          0x00000000        0x0 /tmp/ccl46oJG.o
- .data          0x00000000        0x0 /tmp/ccl46oJG.o
- .bss           0x00000000        0x0 /tmp/ccl46oJG.o
- .text.str_crc8
-                0x00000000       0xc4 /tmp/ccl46oJG.o
- .debug_info    0x00000000      0x113 /tmp/ccl46oJG.o
- .debug_abbrev  0x00000000       0xa3 /tmp/ccl46oJG.o
- .debug_aranges
-                0x00000000       0x20 /tmp/ccl46oJG.o
- .debug_rnglists
-                0x00000000       0x14 /tmp/ccl46oJG.o
- .debug_line    0x00000000       0xf6 /tmp/ccl46oJG.o
- .debug_str     0x00000000      0x14b /tmp/ccl46oJG.o
- .debug_line_str
-                0x00000000       0xcd /tmp/ccl46oJG.o
- .comment       0x00000000       0x23 /tmp/ccl46oJG.o
- .debug_frame   0x00000000       0x34 /tmp/ccl46oJG.o
- .riscv.attributes
-                0x00000000       0x1c /tmp/ccl46oJG.o
- .text          0x00000000       0xb4 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
- .data          0x00000000        0x0 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
- .bss           0x00000000        0x0 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
- .debug_line    0x00000000      0x153 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
- .debug_line_str
-                0x00000000       0xa2 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
- .debug_info    0x00000000       0x5f /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
- .debug_abbrev  0x00000000       0x28 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
- .debug_aranges
-                0x00000000       0x20 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
- .debug_str     0x00000000       0xe7 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
- .riscv.attributes
-                0x00000000       0x1a /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+                0x00000000       0x1c /tmp/ccbeP4ys.o
+ .text          0x00000000        0x0 /tmp/ccSgFIVk.o
+ .data          0x00000000        0x0 /tmp/ccSgFIVk.o
+ .bss           0x00000000        0x0 /tmp/ccSgFIVk.o
 
 Memory Configuration
 
@@ -69,42 +33,48 @@ RAM              0x00020000         0x00020000         xrw
 
 Linker script and memory map
 
-LOAD /tmp/ccdr9rkJ.o
-LOAD /tmp/ccSxR6uQ.o
-LOAD /tmp/ccGAYxJO.o
-LOAD /tmp/ccl46oJG.o
-LOAD /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a
+LOAD /tmp/cci8duq2.o
+LOAD /tmp/ccpzIah3.o
+LOAD /tmp/ccbeP4ys.o
+LOAD /tmp/ccSgFIVk.o
+LOAD /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32im/ilp32/libgcc.a
 
-.text           0x00000000      0x20c
+.text           0x00000000      0x508
  *(.vectors)
- .vectors       0x00000000       0x10 /tmp/ccdr9rkJ.o
+ .vectors       0x00000000       0x10 /tmp/cci8duq2.o
                 0x00000000                _bl_vectors
  *(.text .text.*)
  .text.bl_reset_handler
-                0x00000010       0x10 /tmp/ccdr9rkJ.o
+                0x00000010       0x10 /tmp/cci8duq2.o
                 0x00000010                bl_reset_handler
- .text.bl_jump  0x00000020        0xc /tmp/ccdr9rkJ.o
+ .text.bl_jump  0x00000020       0x10 /tmp/cci8duq2.o
                 0x00000020                bl_jump
- .text.bl_halt  0x0000002c       0x18 /tmp/ccdr9rkJ.o
-                0x0000002c                bl_unexpected
-                0x0000003c                bl_halt
- .text.bl_main  0x00000044       0x58 /tmp/ccSxR6uQ.o
-                0x00000044                bl_main
+ .text.bl_halt  0x00000030       0x18 /tmp/cci8duq2.o
+                0x00000030                bl_unexpected
+                0x00000040                bl_halt
+ .text.bl_log_hex
+                0x00000048      0x11c /tmp/ccpzIah3.o
+ .text.bl_fail  0x00000164       0x30 /tmp/ccpzIah3.o
+ .text.bl_main  0x00000194      0x138 /tmp/ccpzIah3.o
+                0x00000194                bl_main
  .text.uart0_send
-                0x0000009c       0xdc /tmp/ccGAYxJO.o
+                0x000002cc       0xdc /tmp/ccbeP4ys.o
  .text.print_str
-                0x00000178       0x68 /tmp/ccGAYxJO.o
-                0x00000178                print_str
+                0x000003a8       0x68 /tmp/ccbeP4ys.o
+                0x000003a8                print_str
+ .text.str_crc8
+                0x00000410       0xc4 /tmp/ccSgFIVk.o
+                0x00000410                str_crc8
  *(.rodata .rodata.* .srodata .srodata.*)
- .rodata        0x000001e0       0x2b /tmp/ccSxR6uQ.o
-                0x0000020c                        . = ALIGN (0x4)
- *fill*         0x0000020b        0x1 
+ .rodata        0x000004d4       0x31 /tmp/ccpzIah3.o
+                0x00000508                        . = ALIGN (0x4)
+ *fill*         0x00000505        0x3 
 
-.rela.dyn       0x0000020c        0x0
+.rela.dyn       0x00000508        0x0
  .rela.text.bl_reset_handler
-                0x0000020c        0x0 /tmp/ccdr9rkJ.o
+                0x00000508        0x0 /tmp/cci8duq2.o
  .rela.text.bl_main
-                0x0000020c        0x0 /tmp/ccdr9rkJ.o
+                0x00000508        0x0 /tmp/cci8duq2.o
 
 .data
  *(.data)
@@ -125,67 +95,81 @@ LOAD /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a
 OUTPUT(build/bl.elf elf32-littleriscv)
 
 .riscv.attributes
-                0x00000000       0x1c
+                0x00000000       0x2a
  .riscv.attributes
-                0x00000000       0x1a /tmp/ccdr9rkJ.o
+                0x00000000       0x28 /tmp/cci8duq2.o
  .riscv.attributes
-                0x0000001a       0x1c /tmp/ccSxR6uQ.o
+                0x00000028       0x2a /tmp/ccpzIah3.o
  .riscv.attributes
-                0x00000036       0x1c /tmp/ccGAYxJO.o
+                0x00000052       0x2a /tmp/ccbeP4ys.o
+ .riscv.attributes
+                0x0000007c       0x2a /tmp/ccSgFIVk.o
 
 .comment        0x00000000       0x22
- .comment       0x00000000       0x22 /tmp/ccSxR6uQ.o
+ .comment       0x00000000       0x22 /tmp/ccpzIah3.o
                                  0x23 (size before relaxing)
- .comment       0x00000022       0x23 /tmp/ccGAYxJO.o
+ .comment       0x00000022       0x23 /tmp/ccbeP4ys.o
+ .comment       0x00000022       0x23 /tmp/ccSgFIVk.o
 
-.debug_line     0x00000000      0x565
- .debug_line    0x00000000       0xbe /tmp/ccdr9rkJ.o
- .debug_line    0x000000be      0x1b1 /tmp/ccSxR6uQ.o
- .debug_line    0x0000026f      0x2f6 /tmp/ccGAYxJO.o
+.debug_line     0x00000000      0x795
+ .debug_line    0x00000000       0xc4 /tmp/cci8duq2.o
+ .debug_line    0x000000c4      0x2e5 /tmp/ccpzIah3.o
+ .debug_line    0x000003a9      0x2f6 /tmp/ccbeP4ys.o
+ .debug_line    0x0000069f       0xf6 /tmp/ccSgFIVk.o
 
 .debug_line_str
-                0x00000000       0xea
+                0x00000000      0x114
  .debug_line_str
-                0x00000000       0xea /tmp/ccdr9rkJ.o
-                                 0x43 (size before relaxing)
+                0x00000000      0x114 /tmp/cci8duq2.o
+                                 0x3f (size before relaxing)
  .debug_line_str
-                0x000000ea       0xf3 /tmp/ccSxR6uQ.o
+                0x00000114       0xff /tmp/ccpzIah3.o
  .debug_line_str
-                0x000000ea       0x82 /tmp/ccGAYxJO.o
+                0x00000114       0x7a /tmp/ccbeP4ys.o
+ .debug_line_str
+                0x00000114       0xc5 /tmp/ccSgFIVk.o
 
-.debug_info     0x00000000      0x459
- .debug_info    0x00000000       0x5c /tmp/ccdr9rkJ.o
- .debug_info    0x0000005c      0x234 /tmp/ccSxR6uQ.o
- .debug_info    0x00000290      0x1c9 /tmp/ccGAYxJO.o
+.debug_info     0x00000000      0x5b6
+ .debug_info    0x00000000       0x5c /tmp/cci8duq2.o
+ .debug_info    0x0000005c      0x27e /tmp/ccpzIah3.o
+ .debug_info    0x000002da      0x1c9 /tmp/ccbeP4ys.o
+ .debug_info    0x000004a3      0x113 /tmp/ccSgFIVk.o
 
-.debug_abbrev   0x00000000      0x2a9
- .debug_abbrev  0x00000000       0x26 /tmp/ccdr9rkJ.o
- .debug_abbrev  0x00000026      0x19a /tmp/ccSxR6uQ.o
- .debug_abbrev  0x000001c0       0xe9 /tmp/ccGAYxJO.o
+.debug_abbrev   0x00000000      0x349
+ .debug_abbrev  0x00000000       0x26 /tmp/cci8duq2.o
+ .debug_abbrev  0x00000026      0x197 /tmp/ccpzIah3.o
+ .debug_abbrev  0x000001bd       0xe9 /tmp/ccbeP4ys.o
+ .debug_abbrev  0x000002a6       0xa3 /tmp/ccSgFIVk.o
 
-.debug_aranges  0x00000000       0xb0
+.debug_aranges  0x00000000       0xd0
  .debug_aranges
-                0x00000000       0x38 /tmp/ccdr9rkJ.o
+                0x00000000       0x38 /tmp/cci8duq2.o
  .debug_aranges
-                0x00000038       0x30 /tmp/ccSxR6uQ.o
+                0x00000038       0x30 /tmp/ccpzIah3.o
  .debug_aranges
-                0x00000068       0x48 /tmp/ccGAYxJO.o
+                0x00000068       0x48 /tmp/ccbeP4ys.o
+ .debug_aranges
+                0x000000b0       0x20 /tmp/ccSgFIVk.o
 
-.debug_str      0x00000000      0x2a7
- .debug_str     0x00000000      0x2a7 /tmp/ccdr9rkJ.o
-                                 0x8a (size before relaxing)
- .debug_str     0x000002a7      0x231 /tmp/ccSxR6uQ.o
- .debug_str     0x000002a7       0xff /tmp/ccGAYxJO.o
+.debug_str      0x00000000      0x2cb
+ .debug_str     0x00000000      0x2cb /tmp/cci8duq2.o
+                                 0x86 (size before relaxing)
+ .debug_str     0x000002cb      0x252 /tmp/ccpzIah3.o
+ .debug_str     0x000002cb      0x100 /tmp/ccbeP4ys.o
+ .debug_str     0x000002cb      0x14c /tmp/ccSgFIVk.o
 
 .debug_rnglists
-                0x00000000       0x79
+                0x00000000       0x8e
  .debug_rnglists
-                0x00000000       0x25 /tmp/ccdr9rkJ.o
+                0x00000000       0x25 /tmp/cci8duq2.o
  .debug_rnglists
-                0x00000025       0x20 /tmp/ccSxR6uQ.o
+                0x00000025       0x21 /tmp/ccpzIah3.o
  .debug_rnglists
-                0x00000045       0x34 /tmp/ccGAYxJO.o
+                0x00000046       0x34 /tmp/ccbeP4ys.o
+ .debug_rnglists
+                0x0000007a       0x14 /tmp/ccSgFIVk.o
 
-.debug_frame    0x00000000      0x168
- .debug_frame   0x00000000       0x70 /tmp/ccSxR6uQ.o
- .debug_frame   0x00000070       0xf8 /tmp/ccGAYxJO.o
+.debug_frame    0x00000000      0x1a4
+ .debug_frame   0x00000000       0x78 /tmp/ccpzIah3.o
+ .debug_frame   0x00000078       0xf8 /tmp/ccbeP4ys.o
+ .debug_frame   0x00000170       0x34 /tmp/ccSgFIVk.o

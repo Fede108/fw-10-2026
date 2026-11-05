@@ -19,6 +19,7 @@
     .globl  __fw_header
     .type   __fw_header, @object
 __fw_header:
+<<<<<<< HEAD
     .word   FW_IMAGE_MAGIC          /* 0x00 magic "TP4F"                               */
     .word   __fw_start              /* 0x04 load_addr  (linker: dónde quedó linkeado)  */
     .word   __fw_size               /* 0x08 image_size (linker: app.ld)                */
@@ -38,7 +39,8 @@ __fw_header:
     .type   Reset_Handler, @function
 Reset_Handler:
     la      sp, _stack_top
-     
+
+
     la t0, _sdata
     la t1, _sidata
     la t2, _edata
@@ -60,11 +62,13 @@ loop_bss:
     bne t0, t1, loop_bss
 
 call_main:
-    j main
+    jal ra, main
+    ebreak
+    unimp
     li      t0, REG_FW_STATUS_ADDR
     li      t1, FW_STATUS_PASS
     sw      t1, 0(t0)
     ebreak
-
+    
 1:  j       1b
     .size   Reset_Handler, . - Reset_Handler

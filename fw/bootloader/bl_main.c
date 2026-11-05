@@ -63,17 +63,15 @@ static void bl_log_hex(const char *msg, uint32_t val)
     print_str(line);
 }
 
-/* Error: queda visible en FW_REPORT y UART, y se corta la simulación.
- * Ojo: el testbench solo termina con FW_STATUS = 0xFF o con trap; un 0xBAD
- * solo la dejaría corriendo para siempre, por eso bl_halt() hace ebreak. */
 static void __attribute__((noreturn)) bl_fail(enum bl_error code, const char *why)
 {
     print_str(why);
     REG_FW_REPORT = BL_REPORT_ERROR | (uint32_t)code;
     REG_FW_STATUS = FW_STATUS_FAIL;
     print_str("[BL] no se salta al FW: ebreak -> trap -> fin de la simulacion");
-    bl_halt();
 }
+
+
 
 void bl_main(void)
 {
@@ -85,45 +83,32 @@ void bl_main(void)
     REG_FW_REPORT = BL_REPORT_START;
     print_str("bootloader funcionando");
 
-    /* 1) ¿Hay una imagen en el slot? */
-    bl_log_hex("[BL]   magic      = ", hdr->magic);
+   
     if (hdr->magic != FW_IMAGE_MAGIC)
-        bl_fail(BL_ERR_MAGIC, "[BL] ERROR 1: no hay un FW valido en el slot (magic)");
+        bl_fail();
 
-    /* 2) ¿Fue linkeado para correr acá? ("FW en la dirección donde el BL lo espera") */
-    if (hdr->load_addr != slot_base)
-        bl_fail(BL_ERR_LOAD_ADDR, "[BL] ERROR 2: el FW fue linkeado para otra direccion");
+    if (hdr->load_addr != (uint32_t)&__fw_slot_start)
+        bl_fail();
+    
+    if ( FW_HDR_SIZE > hdr->image_size > (uint32_t)&__fw_slot_size)
+        bl_fail();
 
-    /* 3) ¿El tamaño tiene sentido? (además acota la lectura del CRC al slot) */
-    bl_log_hex("[BL]   image_size = ", hdr->image_size);
-    if (hdr->image_size < FW_HDR_SIZE || hdr->image_size > slot_size)
-        bl_fail(BL_ERR_SIZE, "[BL] ERROR 3: image_size fuera de rango");
+    uint8_t* start = (uint8_t*)(&__fw_slot_start);
+    uint32_t crc = str_crc8(start + 0x10,  hdr->image_size +1);
+    if ( hdr->image_crc != crc){
+        bl_log_hex("crc ", crc);
+        bl_fail();
+    }
 
-    /* 4) ¿Está sana? CRC-8 del TP3 desde la vector table hasta el final de la
-     *    imagen: la misma validación que la trama del hito 10 del bloque 3. */
-    const uint32_t crc = str_crc8((const uint8_t *)slot_base + FW_IMAGE_CRC_START,
-                                  hdr->image_size - FW_IMAGE_CRC_START);
-    bl_log_hex("[BL]   crc header = ", hdr->image_crc);
-    bl_log_hex("[BL]   crc calc.  = ", crc);
-    if (crc != hdr->image_crc)
-        bl_fail(BL_ERR_CRC, "[BL] ERROR 4: el CRC no coincide (imagen corrupta o sin mkimage)");
+    if (hdr->initial_sp != ((ADDR_START_DATA + ADDR_SIZE_DATA)) || hdr->initial_sp & 0xF)
+        bl_fail();
 
-    /* 5) Vector table del FW: SP inicial y Reset_Handler razonables */
-    const uint32_t sp    = hdr->initial_sp;
-    const uint32_t entry = hdr->reset_handler;
-    bl_log_hex("[BL]   initial_sp = ", sp);
-    bl_log_hex("[BL]   reset      = ", entry);
-    if (entry < slot_base + FW_HDR_SIZE || entry >= slot_base + hdr->image_size || (entry & 3u))
-        bl_fail(BL_ERR_ENTRY, "[BL] ERROR 5: reset_handler fuera de la imagen o desalineado");
-    if (sp <= ADDR_START_DATA || sp > ADDR_START_DATA + ADDR_SIZE_DATA || (sp & 15u))
-        bl_fail(BL_ERR_SP, "[BL] ERROR 6: initial_sp fuera de la RAM o no alineado a 16 (ABI)");
-
-    REG_FW_REPORT = BL_REPORT_IMG_OK;
-    print_str("[BL] FW OK -> salto al Reset_Handler del FW");
-    REG_FW_REPORT = BL_REPORT_JUMP;
-    bl_jump(sp, entry);             /* ABI ILP32: a0 = sp, a1 = entry. No vuelve. */
-}
-//    bl_log_hex("reset handler ", hdr->reset_handler);
+    if(hdr->reset_handler > ADDR_START_DATA || hdr->reset_handler & 0x3)
+        bl_fail();
+    
+    /* TODO (hito 5) (6) Leer initial_sp y reset_handler de la vector table del FW
+     *                    (hdr->...), marcar BL_REPORT_JUMP y saltar con bl_jump(). */
+    REG_FW_REPORT = BL_REPORT_JUMP; 
     bl_jump(hdr->initial_sp, hdr->reset_handler);
     bl_fail(BL_ERR_MAGIC, "[BL] bl_main() retorna del jump"); 
 }
