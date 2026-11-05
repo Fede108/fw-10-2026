@@ -1,27 +1,27 @@
 
 Discarded input sections
 
- .text          0x00000000        0x0 /tmp/cci8duq2.o
- .data          0x00000000        0x0 /tmp/cci8duq2.o
- .bss           0x00000000        0x0 /tmp/cci8duq2.o
- .text          0x00000000        0x0 /tmp/ccpzIah3.o
- .data          0x00000000        0x0 /tmp/ccpzIah3.o
- .bss           0x00000000        0x0 /tmp/ccpzIah3.o
- .text          0x00000000        0x0 /tmp/ccbeP4ys.o
- .data          0x00000000        0x0 /tmp/ccbeP4ys.o
- .bss           0x00000000        0x0 /tmp/ccbeP4ys.o
+ .text          0x00000000        0x0 /tmp/ccJ8MnfX.o
+ .data          0x00000000        0x0 /tmp/ccJ8MnfX.o
+ .bss           0x00000000        0x0 /tmp/ccJ8MnfX.o
+ .text          0x00000000        0x0 /tmp/cc3oZgfN.o
+ .data          0x00000000        0x0 /tmp/cc3oZgfN.o
+ .bss           0x00000000        0x0 /tmp/cc3oZgfN.o
+ .text          0x00000000        0x0 /tmp/ccd4MNGC.o
+ .data          0x00000000        0x0 /tmp/ccd4MNGC.o
+ .bss           0x00000000        0x0 /tmp/ccd4MNGC.o
  .text.print_chr
-                0x00000000       0x40 /tmp/ccbeP4ys.o
+                0x00000000       0x40 /tmp/ccd4MNGC.o
  .text.print_dec
-                0x00000000       0xd4 /tmp/ccbeP4ys.o
- .rodata        0x00000000       0x11 /tmp/ccbeP4ys.o
+                0x00000000       0xd4 /tmp/ccd4MNGC.o
+ .rodata        0x00000000       0x11 /tmp/ccd4MNGC.o
  .text.print_hex
-                0x00000000       0xb8 /tmp/ccbeP4ys.o
+                0x00000000       0xb8 /tmp/ccd4MNGC.o
  .text.print_flush_buffer
-                0x00000000       0x1c /tmp/ccbeP4ys.o
- .text          0x00000000        0x0 /tmp/ccSgFIVk.o
- .data          0x00000000        0x0 /tmp/ccSgFIVk.o
- .bss           0x00000000        0x0 /tmp/ccSgFIVk.o
+                0x00000000       0x1c /tmp/ccd4MNGC.o
+ .text          0x00000000        0x0 /tmp/ccKiUuU4.o
+ .data          0x00000000        0x0 /tmp/ccKiUuU4.o
+ .bss           0x00000000        0x0 /tmp/ccKiUuU4.o
 
 Memory Configuration
 
@@ -33,48 +33,48 @@ RAM              0x00020000         0x00020000         xrw
 
 Linker script and memory map
 
-LOAD /tmp/cci8duq2.o
-LOAD /tmp/ccpzIah3.o
-LOAD /tmp/ccbeP4ys.o
-LOAD /tmp/ccSgFIVk.o
+LOAD /tmp/ccJ8MnfX.o
+LOAD /tmp/cc3oZgfN.o
+LOAD /tmp/ccd4MNGC.o
+LOAD /tmp/ccKiUuU4.o
 LOAD /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32im/ilp32/libgcc.a
 
-.text           0x00000000      0x508
+.text           0x00000000      0x594
  *(.vectors)
- .vectors       0x00000000       0x10 /tmp/cci8duq2.o
+ .vectors       0x00000000       0x14 /tmp/ccJ8MnfX.o
                 0x00000000                _bl_vectors
  *(.text .text.*)
  .text.bl_reset_handler
-                0x00000010       0x10 /tmp/cci8duq2.o
-                0x00000010                bl_reset_handler
- .text.bl_jump  0x00000020       0x10 /tmp/cci8duq2.o
-                0x00000020                bl_jump
- .text.bl_halt  0x00000030       0x18 /tmp/cci8duq2.o
-                0x00000030                bl_unexpected
-                0x00000040                bl_halt
+                0x00000014       0x10 /tmp/ccJ8MnfX.o
+                0x00000014                bl_reset_handler
+ .text.bl_jump  0x00000024       0x10 /tmp/ccJ8MnfX.o
+                0x00000024                bl_jump
+ .text.bl_halt  0x00000034       0x18 /tmp/ccJ8MnfX.o
+                0x00000034                bl_unexpected
+                0x00000044                bl_halt
  .text.bl_log_hex
-                0x00000048      0x11c /tmp/ccpzIah3.o
- .text.bl_fail  0x00000164       0x30 /tmp/ccpzIah3.o
- .text.bl_main  0x00000194      0x138 /tmp/ccpzIah3.o
-                0x00000194                bl_main
+                0x0000004c      0x11c /tmp/cc3oZgfN.o
+ .text.bl_fail  0x00000168       0x54 /tmp/cc3oZgfN.o
+ .text.bl_main  0x000001bc      0x160 /tmp/cc3oZgfN.o
+                0x000001bc                bl_main
  .text.uart0_send
-                0x000002cc       0xdc /tmp/ccbeP4ys.o
+                0x0000031c       0xdc /tmp/ccd4MNGC.o
  .text.print_str
-                0x000003a8       0x68 /tmp/ccbeP4ys.o
-                0x000003a8                print_str
+                0x000003f8       0x68 /tmp/ccd4MNGC.o
+                0x000003f8                print_str
  .text.str_crc8
-                0x00000410       0xc4 /tmp/ccSgFIVk.o
-                0x00000410                str_crc8
+                0x00000460       0xc4 /tmp/ccKiUuU4.o
+                0x00000460                str_crc8
  *(.rodata .rodata.* .srodata .srodata.*)
- .rodata        0x000004d4       0x31 /tmp/ccpzIah3.o
-                0x00000508                        . = ALIGN (0x4)
- *fill*         0x00000505        0x3 
+ .rodata        0x00000524       0x6e /tmp/cc3oZgfN.o
+                0x00000594                        . = ALIGN (0x4)
+ *fill*         0x00000592        0x2 
 
-.rela.dyn       0x00000508        0x0
+.rela.dyn       0x00000594        0x0
  .rela.text.bl_reset_handler
-                0x00000508        0x0 /tmp/cci8duq2.o
+                0x00000594        0x0 /tmp/ccJ8MnfX.o
  .rela.text.bl_main
-                0x00000508        0x0 /tmp/cci8duq2.o
+                0x00000594        0x0 /tmp/ccJ8MnfX.o
 
 .data
  *(.data)
@@ -97,79 +97,79 @@ OUTPUT(build/bl.elf elf32-littleriscv)
 .riscv.attributes
                 0x00000000       0x2a
  .riscv.attributes
-                0x00000000       0x28 /tmp/cci8duq2.o
+                0x00000000       0x28 /tmp/ccJ8MnfX.o
  .riscv.attributes
-                0x00000028       0x2a /tmp/ccpzIah3.o
+                0x00000028       0x2a /tmp/cc3oZgfN.o
  .riscv.attributes
-                0x00000052       0x2a /tmp/ccbeP4ys.o
+                0x00000052       0x2a /tmp/ccd4MNGC.o
  .riscv.attributes
-                0x0000007c       0x2a /tmp/ccSgFIVk.o
+                0x0000007c       0x2a /tmp/ccKiUuU4.o
 
 .comment        0x00000000       0x22
- .comment       0x00000000       0x22 /tmp/ccpzIah3.o
+ .comment       0x00000000       0x22 /tmp/cc3oZgfN.o
                                  0x23 (size before relaxing)
- .comment       0x00000022       0x23 /tmp/ccbeP4ys.o
- .comment       0x00000022       0x23 /tmp/ccSgFIVk.o
+ .comment       0x00000022       0x23 /tmp/ccd4MNGC.o
+ .comment       0x00000022       0x23 /tmp/ccKiUuU4.o
 
-.debug_line     0x00000000      0x795
- .debug_line    0x00000000       0xc4 /tmp/cci8duq2.o
- .debug_line    0x000000c4      0x2e5 /tmp/ccpzIah3.o
- .debug_line    0x000003a9      0x2f6 /tmp/ccbeP4ys.o
- .debug_line    0x0000069f       0xf6 /tmp/ccSgFIVk.o
+.debug_line     0x00000000      0x7b7
+ .debug_line    0x00000000       0xca /tmp/ccJ8MnfX.o
+ .debug_line    0x000000ca      0x301 /tmp/cc3oZgfN.o
+ .debug_line    0x000003cb      0x2f6 /tmp/ccd4MNGC.o
+ .debug_line    0x000006c1       0xf6 /tmp/ccKiUuU4.o
 
 .debug_line_str
-                0x00000000      0x114
+                0x00000000      0x118
  .debug_line_str
-                0x00000000      0x114 /tmp/cci8duq2.o
-                                 0x3f (size before relaxing)
+                0x00000000      0x118 /tmp/ccJ8MnfX.o
+                                 0x43 (size before relaxing)
  .debug_line_str
-                0x00000114       0xff /tmp/ccpzIah3.o
+                0x00000118      0x107 /tmp/cc3oZgfN.o
  .debug_line_str
-                0x00000114       0x7a /tmp/ccbeP4ys.o
+                0x00000118       0x82 /tmp/ccd4MNGC.o
  .debug_line_str
-                0x00000114       0xc5 /tmp/ccSgFIVk.o
+                0x00000118       0xcd /tmp/ccKiUuU4.o
 
-.debug_info     0x00000000      0x5b6
- .debug_info    0x00000000       0x5c /tmp/cci8duq2.o
- .debug_info    0x0000005c      0x27e /tmp/ccpzIah3.o
- .debug_info    0x000002da      0x1c9 /tmp/ccbeP4ys.o
- .debug_info    0x000004a3      0x113 /tmp/ccSgFIVk.o
+.debug_info     0x00000000      0x5e2
+ .debug_info    0x00000000       0x5c /tmp/ccJ8MnfX.o
+ .debug_info    0x0000005c      0x2aa /tmp/cc3oZgfN.o
+ .debug_info    0x00000306      0x1c9 /tmp/ccd4MNGC.o
+ .debug_info    0x000004cf      0x113 /tmp/ccKiUuU4.o
 
-.debug_abbrev   0x00000000      0x349
- .debug_abbrev  0x00000000       0x26 /tmp/cci8duq2.o
- .debug_abbrev  0x00000026      0x197 /tmp/ccpzIah3.o
- .debug_abbrev  0x000001bd       0xe9 /tmp/ccbeP4ys.o
- .debug_abbrev  0x000002a6       0xa3 /tmp/ccSgFIVk.o
+.debug_abbrev   0x00000000      0x373
+ .debug_abbrev  0x00000000       0x26 /tmp/ccJ8MnfX.o
+ .debug_abbrev  0x00000026      0x1c1 /tmp/cc3oZgfN.o
+ .debug_abbrev  0x000001e7       0xe9 /tmp/ccd4MNGC.o
+ .debug_abbrev  0x000002d0       0xa3 /tmp/ccKiUuU4.o
 
 .debug_aranges  0x00000000       0xd0
  .debug_aranges
-                0x00000000       0x38 /tmp/cci8duq2.o
+                0x00000000       0x38 /tmp/ccJ8MnfX.o
  .debug_aranges
-                0x00000038       0x30 /tmp/ccpzIah3.o
+                0x00000038       0x30 /tmp/cc3oZgfN.o
  .debug_aranges
-                0x00000068       0x48 /tmp/ccbeP4ys.o
+                0x00000068       0x48 /tmp/ccd4MNGC.o
  .debug_aranges
-                0x000000b0       0x20 /tmp/ccSgFIVk.o
+                0x000000b0       0x20 /tmp/ccKiUuU4.o
 
-.debug_str      0x00000000      0x2cb
- .debug_str     0x00000000      0x2cb /tmp/cci8duq2.o
-                                 0x86 (size before relaxing)
- .debug_str     0x000002cb      0x252 /tmp/ccpzIah3.o
- .debug_str     0x000002cb      0x100 /tmp/ccbeP4ys.o
- .debug_str     0x000002cb      0x14c /tmp/ccSgFIVk.o
+.debug_str      0x00000000      0x2d4
+ .debug_str     0x00000000      0x2d4 /tmp/ccJ8MnfX.o
+                                 0x8a (size before relaxing)
+ .debug_str     0x000002d4      0x25f /tmp/cc3oZgfN.o
+ .debug_str     0x000002d4      0x100 /tmp/ccd4MNGC.o
+ .debug_str     0x000002d4      0x14c /tmp/ccKiUuU4.o
 
 .debug_rnglists
                 0x00000000       0x8e
  .debug_rnglists
-                0x00000000       0x25 /tmp/cci8duq2.o
+                0x00000000       0x25 /tmp/ccJ8MnfX.o
  .debug_rnglists
-                0x00000025       0x21 /tmp/ccpzIah3.o
+                0x00000025       0x21 /tmp/cc3oZgfN.o
  .debug_rnglists
-                0x00000046       0x34 /tmp/ccbeP4ys.o
+                0x00000046       0x34 /tmp/ccd4MNGC.o
  .debug_rnglists
-                0x0000007a       0x14 /tmp/ccSgFIVk.o
+                0x0000007a       0x14 /tmp/ccKiUuU4.o
 
-.debug_frame    0x00000000      0x1a4
- .debug_frame   0x00000000       0x78 /tmp/ccpzIah3.o
- .debug_frame   0x00000078       0xf8 /tmp/ccbeP4ys.o
- .debug_frame   0x00000170       0x34 /tmp/ccSgFIVk.o
+.debug_frame    0x00000000      0x19c
+ .debug_frame   0x00000000       0x70 /tmp/cc3oZgfN.o
+ .debug_frame   0x00000070       0xf8 /tmp/ccd4MNGC.o
+ .debug_frame   0x00000168       0x34 /tmp/ccKiUuU4.o

@@ -63,12 +63,17 @@ static void bl_log_hex(const char *msg, uint32_t val)
     print_str(line);
 }
 
+
 static void __attribute__((noreturn)) bl_fail(enum bl_error code, const char *why)
 {
+    REG_FW_REPORT = BL_REPORT_ERROR | code;
+    REG_FW_STATUS = 0xBAD;
+
     print_str(why);
-    REG_FW_REPORT = BL_REPORT_ERROR | (uint32_t)code;
-    REG_FW_STATUS = FW_STATUS_FAIL;
-    print_str("[BL] no se salta al FW: ebreak -> trap -> fin de la simulacion");
+    print_str("\n");
+    
+    /* trap: con 0xBAD solo, la simulación no termina */
+    bl_halt();
 }
 
 
@@ -83,31 +88,28 @@ void bl_main(void)
     REG_FW_REPORT = BL_REPORT_START;
     print_str("bootloader funcionando");
 
-   
     if (hdr->magic != FW_IMAGE_MAGIC)
-        bl_fail();
+        bl_fail(BL_ERR_MAGIC, "ERR MAGIC");
 
     if (hdr->load_addr != (uint32_t)&__fw_slot_start)
-        bl_fail();
+        bl_fail(BL_ERR_LOAD_ADDR, "ERR LOAD ADDR");
     
     if ( FW_HDR_SIZE > hdr->image_size > (uint32_t)&__fw_slot_size)
-        bl_fail();
+        bl_fail(BL_ERR_SIZE, "ERR SIZE");
 
     uint8_t* start = (uint8_t*)(&__fw_slot_start);
-    uint32_t crc = str_crc8(start + 0x10,  hdr->image_size +1);
+    uint32_t crc = str_crc8(start + FW_IMAGE_CRC_START,  hdr->image_size - FW_IMAGE_CRC_START);
     if ( hdr->image_crc != crc){
         bl_log_hex("crc ", crc);
-        bl_fail();
+        bl_fail(BL_ERR_CRC, "ERR CRC");
     }
 
     if (hdr->initial_sp != ((ADDR_START_DATA + ADDR_SIZE_DATA)) || hdr->initial_sp & 0xF)
-        bl_fail();
+        bl_fail(BL_ERR_SP, "ERR SP");
 
     if(hdr->reset_handler > ADDR_START_DATA || hdr->reset_handler & 0x3)
-        bl_fail();
+        bl_fail(BL_ERR_ENTRY, "ERR ENTRY");
     
-    /* TODO (hito 5) (6) Leer initial_sp y reset_handler de la vector table del FW
-     *                    (hdr->...), marcar BL_REPORT_JUMP y saltar con bl_jump(). */
     REG_FW_REPORT = BL_REPORT_JUMP; 
     bl_jump(hdr->initial_sp, hdr->reset_handler);
     bl_fail(BL_ERR_MAGIC, "[BL] bl_main() retorna del jump"); 
