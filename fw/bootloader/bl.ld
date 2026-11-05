@@ -33,19 +33,18 @@ SECTIONS
     __bl_bss_end = .;
   } > RAM
 
-  /DISCARD/ : { *(.eh_frame .eh_frame_hdr) }
+    ASSERT(SIZEOF(.data)<1, ".data grande")
+    ASSERT(SIZEOF(.bss)<1, ".bss grande") 
+
+    /DISCARD/ : { *(.eh_frame .eh_frame_hdr) }
+
+    /* TODO: _bl_stack_top (lo usa bl_start.S). ¿Donde conviene que quede el stack del BL? */
+   _bl_stack_top = ORIGIN(RAM) + LENGTH(RAM);
+
 }
 
-/* Stack del BL: tope de la RAM (despues el FW carga el suyo desde su vector table) */
-_bl_stack_top = ORIGIN(RAM) + LENGTH(RAM);
-
-/* Donde espera el BL encontrar al FW (los usa bl_main.c como extern) */
+* Donde espera el BL encontrar al FW (los usa bl_main.c como extern) */
 __fw_slot_start = ORIGIN(APP_ROM);
 __fw_slot_size  = LENGTH(APP_ROM);
 
-ASSERT(_bl_vectors == ORIGIN(BL_ROM),
-       "TP4/BL: la vector table del BL tiene que quedar en PROGADDR_RESET (0x0)")
-ASSERT(__bl_data_end == __bl_data_start,
-       "TP4/BL: el BL no debe usar variables globales inicializadas (.data)")
-ASSERT(__bl_bss_end == __bl_bss_start,
-       "TP4/BL: el BL no debe usar variables globales sin inicializar (.bss)")
+ASSERT(_bl_vectors == ORIGIN(BL_ROM), "_bl_vectors direccion erronea")

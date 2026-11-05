@@ -23,4 +23,6 @@ const char *strbuf_cstr(const strbuf_t *buf);
 size_t str_trim(char *dst, const char *src, size_t max_len);
 uint8_t str_crc8(const uint8_t *data, size_t len);
 
+int    str_equal(const char *a, const char *b);
+
 #endif /* STRUTILS_H */

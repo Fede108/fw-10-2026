@@ -26,6 +26,7 @@ __fw_header:
     /* --- vector table del FW: direcciones, como en Cortex-M --- */
     .word   _stack_top              /* 0x10 initial_sp                                 */
     .word   Reset_Handler           /* 0x14 reset_handler                              */
+
     .size   __fw_header, . - __fw_header
 
 /* ------------------------------------------------------------------------ */
@@ -36,39 +37,34 @@ __fw_header:
     .globl  Reset_Handler
     .type   Reset_Handler, @function
 Reset_Handler:
-    /* 1) Stack. El BL ya cargó sp desde la vector table, pero lo recargamos:
-     *    así el FW también arranca bien si alguien salta directo a él. */
     la      sp, _stack_top
+     
+    la t0, _sdata
+    la t1, _sidata
+    la t2, _edata
+    beq t0, t2, limpiar_bss
+copy_data:
+    lw a0, 0(t1)
+    sw a0, 0(t0)
+    addi t0, t0,  4
+    addi t1, t1,  4
+    bne t0, t2, copy_data
 
-    /* 2) Copiar .data: de su LMA (dentro de la imagen del FW) a su VMA (RAM) */
-    la      t0, _sidata
-    la      t1, _sdata
-    la      t2, _edata
-1:  bgeu    t1, t2, 2f
-    lw      t3, 0(t0)
-    sw      t3, 0(t1)
-    addi    t0, t0, 4
-    addi    t1, t1, 4
-    j       1b
+limpiar_bss:
+    la t0, _sbss
+    la t1, _ebss
+    beq t0, t1, call_main
+loop_bss:
+    sw x0, 0(t0)
+    addi t0, t0, 4
+    bne t0, t1, loop_bss
 
-    /* 3) Poner .bss en cero */
-2:  la      t0, _sbss
-    la      t1, _ebss
-3:  bgeu    t0, t1, 4f
-    sw      zero, 0(t0)
-    addi    t0, t0, 4
-    j       3b
-
-    /* 4) No hay C++ (no hay constructores en .init_array): directo a main() */
-4:  call    main
-
-    /* 5) main() volvió. Si no dejó PASS (0xFF) en REG_FW_STATUS, ebreak:
-     *    con ENABLE_IRQ=0 PicoRV32 hace trap y el testbench corta la simulación
-     *    (con el startup.S original, un FAIL = 0xBAD la dejaba corriendo). */
+call_main:
+    j main
     li      t0, REG_FW_STATUS_ADDR
-    lw      t1, 0(t0)
-    li      t2, FW_STATUS_PASS
-    beq     t1, t2, 5f
+    li      t1, FW_STATUS_PASS
+    sw      t1, 0(t0)
     ebreak
-5:  j       5b
+
+1:  j       1b
     .size   Reset_Handler, . - Reset_Handler

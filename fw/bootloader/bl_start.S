@@ -28,6 +28,7 @@ _bl_vectors:
     j       bl_unexpected           /* 0x08  no es vector en PicoRV32                */
     j       bl_unexpected           /* 0x0C  no es vector en PicoRV32                */
     j       bl_unexpected           /* 0x10  PROGADDR_IRQ (con ENABLE_IRQ=0 no se usa) */
+
     .size   _bl_vectors, . - _bl_vectors
     .option pop
 
@@ -38,16 +39,10 @@ _bl_vectors:
     .globl  bl_reset_handler
     .type   bl_reset_handler, @function
 bl_reset_handler:
-    /* 1) Stack del BL. PicoRV32 no inicializa sp por HW (STACKADDR queda en
-     *    0xFFFF_FFFF en top.v): sin esto, la primera llamada a C rompe todo. */
     la      sp, _bl_stack_top
-
-    /* 2) .data/.bss del BL: no hay (bl.ld lo garantiza con ASSERT), así que
-     *    no hay nada que copiar ni poner en cero. Ese es el "init mínimo". */
-
-    /* 3) Validar el FW y saltar. bl_main() no vuelve. */
     call    bl_main
     j       bl_unexpected           /* si volviera, es un bug: FAIL */
+
     .size   bl_reset_handler, . - bl_reset_handler
 
 /* ------------------------------------------------------------------------ */
@@ -61,9 +56,9 @@ bl_reset_handler:
     .globl  bl_jump
     .type   bl_jump, @function
 bl_jump:
-    mv      sp, a0                  /* SP inicial que pide el FW (su vector table) */
-    li      ra, 0
-    jr      a1                      /* -> Reset_Handler del FW                     */
+    lw sp, 0(a0)
+    jalr x0, a1, 0
+    j       bl_unexpected
     .size   bl_jump, . - bl_jump
 
 /* ------------------------------------------------------------------------ */

@@ -2,7 +2,8 @@
 
 module top #() (
         input wire i_clk     ,
-        input wire i_resetn
+        input wire i_resetn,
+        output wire trap
 );
 
     wire mem_valid;
@@ -24,13 +25,13 @@ module top #() (
         .BARREL_SHIFTER       (   ), //default: 0
         .TWO_CYCLE_COMPARE    (   ), //default: 0
         .TWO_CYCLE_ALU        (   ), //default: 0
-        .COMPRESSED_ISA       (   ), //default: 0
+        .COMPRESSED_ISA       (0  ), //default: 0
         .CATCH_MISALIGN       (   ), //default: 1
         .CATCH_ILLINSN        (   ), //default: 1
         .ENABLE_PCPI          (   ), //default: 0
-        .ENABLE_MUL           (   ), //default: 0
-        .ENABLE_FAST_MUL      (   ), //default: 0
-        .ENABLE_DIV           (   ), //default: 0
+        .ENABLE_MUL           (1 ), //default: 0
+        .ENABLE_FAST_MUL      (  ), //default: 0
+        .ENABLE_DIV           (1 ), //default: 0
         .ENABLE_IRQ           (   ), //default: 0
         .ENABLE_IRQ_QREGS     (   ), //default: 1
         .ENABLE_IRQ_TIMER     (   ), //default: 1

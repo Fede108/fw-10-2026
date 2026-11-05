@@ -83,8 +83,7 @@ void bl_main(void)
 
     REG_FW_STATUS = FW_STATUS_RUNNING;
     REG_FW_REPORT = BL_REPORT_START;
-    print_str("[BL] TP4 bootloader: arranque desde reset (0x00000000)");
-    bl_log_hex("[BL] buscando FW en ", slot_base);
+    print_str("bootloader funcionando");
 
     /* 1) ¿Hay una imagen en el slot? */
     bl_log_hex("[BL]   magic      = ", hdr->magic);
@@ -123,4 +122,8 @@ void bl_main(void)
     print_str("[BL] FW OK -> salto al Reset_Handler del FW");
     REG_FW_REPORT = BL_REPORT_JUMP;
     bl_jump(sp, entry);             /* ABI ILP32: a0 = sp, a1 = entry. No vuelve. */
+}
+//    bl_log_hex("reset handler ", hdr->reset_handler);
+    bl_jump(hdr->initial_sp, hdr->reset_handler);
+    bl_fail(BL_ERR_MAGIC, "[BL] bl_main() retorna del jump"); 
 }

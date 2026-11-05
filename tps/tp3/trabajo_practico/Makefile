@@ -4,9 +4,9 @@
 CC        = gcc
 AR        = ar
 RANLIB    = ranlib
-CFLAGS    = -Wall -Wextra -std=c11 -g -O0
+CFLAGS    = -Wall -Wextra -Werror -std=c11 -g -O0
 CFLAGS   += -ffunction-sections -fdata-sections
-OPT_FLAGS = -Wall -Wextra -std=c11 -O2 -DNDEBUG
+OPT_FLAGS = -Wall -Wextra -std=c11 -O2 -DNDEBUG 
 OPT_FLAGS += -ffunction-sections -fdata-sections
 LDFLAGS   = -Wl,--gc-sections
 INCLUDES  = -Isrc/lib -Isrc/hal -Isrc/demo -Isrc/app -Isrc/platform
@@ -15,10 +15,10 @@ TARGET    = $(BUILD_DIR)/building_process_demo
 TARGET_OPT= $(BUILD_DIR)/building_process_demo_opt
 STATIC_LIB= $(BUILD_DIR)/libutils.a
 
-SRCS  = src/app/main.c
+SRCS = src/app/main.c $(wildcard src/demo/demo_*.c)
 
-USE_STATIC_LIB = 0
-LIB_SRCS =
+USE_STATIC_LIB = 1
+LIB_SRCS = $(wildcard src/lib/*.c) $(wildcard src/hal/*.c) 
 
 # Salida de consola: formato común + backend de la plataforma (src/platform/<PLATFORM>/)
 PLATFORM      = host

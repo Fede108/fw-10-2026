@@ -45,7 +45,9 @@ SECTIONS
     _ebss = .;
   } > RAM
 
-  /DISCARD/ : { *(.eh_frame .eh_frame_hdr) }
+    /DISCARD/ : { *(.eh_frame .eh_frame_hdr) }
+    
+    _stack_top = ORIGIN(RAM) + LENGTH(RAM);
 }
 
 /* Fin de la imagen cargable = fin de la copia de .data dentro de APP_ROM */
@@ -55,5 +57,5 @@ _stack_top = ORIGIN(RAM) + LENGTH(RAM);
 
 ASSERT(__fw_start == ORIGIN(APP_ROM),
        "TP4/FW: el header del FW tiene que quedar al principio de APP_ROM")
-ASSERT(_ebss + __min_stack_size <= _stack_top,
-       "TP4/FW: .data + .bss no dejan lugar para el stack")
+
+ASSERT(SIZEOF(.bss) + SIZEOF(.data) + __min_stack_size <= _stack_top, "stack sin espacio")

@@ -21,7 +21,7 @@ CFLAGS    = -Wall -Wextra -std=c11 -g -O0 $(INCLUDES)
 CFLAGS   += -ffunction-sections -fdata-sections
 CXXFLAGS  = -Wall -Wextra -std=c++17 -g -O0 $(INCLUDES)
 CXXFLAGS += -ffunction-sections -fdata-sections
-LDFLAGS   = -Wl,--gc-sections
+LDFLAGS   = -Wl,--gc-sections,--print-gc-sections
 
 # --- Source files ---
 

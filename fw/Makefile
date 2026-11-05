@@ -30,9 +30,14 @@
 #  Correr desde esta carpeta (o con make -C). El flujo integrado instala fw.hex en
 #  ../fw/, que es la imagen que carga el testbench de la plataforma.
 # =============================================================================
+# Toolchain
+CC      = riscv64-unknown-elf-gcc
+OBJDUMP = riscv64-unknown-elf-objdump
+OBJCOPY = riscv64-unknown-elf-objcopy
 
 PLATFORM ?= ../
 FW_DIR   ?= $(PLATFORM)/fw
+
 # Biblioteca local de CRC; se puede reemplazar con FW_LIB=...
 FW_LIB   ?= $(FW_DIR)/lib
 TOOLS     = $(FW_DIR)/tools
