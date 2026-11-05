@@ -32,6 +32,7 @@ _bl_vectors:
     jal bl_unexpected
     jal bl_unexpected
     jal bl_unexpected
+    jal bl_unexpected
     .size   _bl_vectors, . - _bl_vectors
     .option pop
 

@@ -70,12 +70,9 @@ loop_bss:
 
 call_main:
     jal ra, main
-    ebreak
-    unimp
     li      t0, REG_FW_STATUS_ADDR
     li      t1, FW_STATUS_PASS
     sw      t1, 0(t0)
-    ebreak
     
 1:  j       1b
     .size   Reset_Handler, . - Reset_Handler
