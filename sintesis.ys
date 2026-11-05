@@ -1,0 +1,13 @@
+# 1. Leer todos los archivos .v y .sv de rtl/ y de submodules/picorv32/
+# El flag -sv es necesario porque picorv32 usa características de SystemVerilog
+read_verilog -sv rtl/top.v submodules/picorv32/picorv32.v
+
+# 2. Definir el módulo top
+hierarchy -top top
+
+# 3. Mapeo RTL y optimizaciones básicas
+proc; opt; fsm; opt; memory; opt
+techmap; opt
+
+# 4. Reporte general del top y desglose jerárquico
+stat -top top

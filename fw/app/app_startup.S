@@ -22,12 +22,12 @@ __fw_header:
      *   0x10 initial_sp, 0x14 reset_handler.
      *   ¿Cuáles salen de símbolos del linker? ¿Qué valor ponen en image_crc,
      *   si lo escribe tools/mkimage.py DESPUÉS de linkear? */
-    .word   0                       /* 0x00 magic          (TODO) */
-    .word   0                       /* 0x04 load_addr      (TODO) */
-    .word   0                       /* 0x08 image_size     (TODO) */
+    .word   FW_IMAGE_MAGIC          /* 0x00 magic          (TODO) */
+    .word   __fw_start              /* 0x04 load_addr      (TODO) */
+    .word   __fw_size               /* 0x08 image_size     (TODO) */
     .word   0                       /* 0x0C image_crc      (TODO) */
-    .word   0                       /* 0x10 initial_sp     (TODO) */
-    .word   0                       /* 0x14 reset_handler  (TODO) */
+    .word   _stack_top              /* 0x10 initial_sp     (TODO) */
+    .word   Reset_Handler          /* 0x14 reset_handler  (TODO) */
     .size   __fw_header, . - __fw_header
 
 /* ------------------------------------------------------------------------ */
@@ -47,5 +47,35 @@ Reset_Handler:
      *      (¿qué pasa con la simulación si no lo hacen?)
      */
 
-1:  j       1b                      /* borrar al completar */
+            
+    j call_main
+     
+    la t0, _sdata
+    la t1, _sidata
+    la t2, _edata
+    beq t0, t2, limpiar_bss
+copy_data:
+    lw a0, 0(t1)
+    sw a0, 0(t0)
+    addi t0, t0,  4
+    addi t1, t1,  4
+    bne t0, t2, copy_data
+
+limpiar_bss:
+    la t0, _sbss
+    la t1, _ebss
+    beq t0, t1, call_main
+loop_bss:
+    sw x0, 0(t0)
+    addi t0, t0, 4
+    bne t0, t1, loop_bss
+
+call_main:
+    j main
+    li      t0, REG_FW_STATUS_ADDR
+    li      t1, FW_STATUS_PASS
+    sw      t1, 0(t0)
+    ebreak
+
+1:  j       1b
     .size   Reset_Handler, . - Reset_Handler

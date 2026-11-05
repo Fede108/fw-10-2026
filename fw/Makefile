@@ -22,9 +22,14 @@
 #  Correr desde esta carpeta (o con make -C). El flujo integrado instala fw.hex en
 #  ../fw/, que es la imagen que carga el testbench de la plataforma.
 # =============================================================================
+# Toolchain
+CC      = riscv64-unknown-elf-gcc
+OBJDUMP = riscv64-unknown-elf-objdump
+OBJCOPY = riscv64-unknown-elf-objcopy
 
 PLATFORM ?= ../
 FW_DIR   ?= $(PLATFORM)/fw
+
 # Biblioteca local de CRC; se puede reemplazar con FW_LIB=...
 FW_LIB   ?= $(FW_DIR)/lib
 TOOLS     = $(FW_DIR)/tools
@@ -46,7 +51,8 @@ PYTHON ?= python3
 # El FW puede usar el -march del TP2 (rv32ic, rv32imc...) si top.v lo soporta.
 BL_MARCH   = rv32i
 APP_MARCH ?= rv32i
-COMMON     = -mabi=ilp32 -O2 -ffreestanding -nostdlib -nostartfiles -g -I$(FW_DIR) -I$(FW_LIB)/inc
+COMMON     = -mabi=ilp32 -O0 -ffreestanding -nostdlib -nostartfiles -g -I$(FW_DIR) -I$(FW_LIB)/inc
+
 # BL: una sección por función (--gc-sections tira lo que no usa de print.c), warnings,
 # y que GCC no convierta loops en llamadas a memcpy/memset (no hay libc)
 BL_CFLAGS  = -march=$(BL_MARCH) $(COMMON) -ffunction-sections -fdata-sections -Wall -fno-tree-loop-distribute-patterns

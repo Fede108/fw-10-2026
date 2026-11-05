@@ -79,6 +79,10 @@ void bl_main(void)
 
     /* TODO (hito 5) (0) Avisar que el BL arrancó: REG_FW_STATUS = 0 (corriendo),
      *                    REG_FW_REPORT = BL_REPORT_START y un mensaje por UART. */
+    
+    REG_FW_STATUS = 0;
+    REG_FW_REPORT = BL_REPORT_START;
+    print_str("bootloader funcionando");
 
     /* TODO (hito 7) (1) magic == FW_IMAGE_MAGIC                       -> si no, BL_ERR_MAGIC
      *                (2) load_addr == dirección del slot               -> si no, BL_ERR_LOAD_ADDR
@@ -92,6 +96,7 @@ void bl_main(void)
     /* TODO (hito 5) (6) Leer initial_sp y reset_handler de la vector table del FW
      *                    (hdr->...), marcar BL_REPORT_JUMP y saltar con bl_jump(). */
 
-    (void)hdr; (void)bl_log_hex;                      /* borrar al completar */
-    bl_fail(BL_ERR_MAGIC, "[BL] TODO: bl_main() sin completar");   /* borrar al completar */
+//    bl_log_hex("reset handler ", hdr->reset_handler);
+    bl_jump(hdr->initial_sp, hdr->reset_handler);
+    bl_fail(BL_ERR_MAGIC, "[BL] bl_main() retorna del jump"); 
 }

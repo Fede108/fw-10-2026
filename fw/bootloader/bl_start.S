@@ -28,6 +28,10 @@ _bl_vectors:
      *   Pregunta: ¿por qué acá la vector table son INSTRUCCIONES y en Cortex-M
      *   son DIRECCIONES? */
 
+    jal bl_reset_handler
+    jal bl_unexpected
+    jal bl_unexpected
+    jal bl_unexpected
     .size   _bl_vectors, . - _bl_vectors
     .option pop
 
@@ -45,8 +49,9 @@ bl_reset_handler:
      *      que copiar ni poner en cero (¿cómo garantizan que no las use?).
      *   3) Llamar a bl_main(), que no vuelve.
      */
-
-    j       bl_unexpected           /* si bl_main volviera (o mientras no esté hecho): FAIL */
+    la sp, _bl_stack_top
+    j bl_main
+    j       bl_unexpected      /* si bl_main volviera (o mientras no esté hecho): FAIL */
     .size   bl_reset_handler, . - bl_reset_handler
 
 /* ------------------------------------------------------------------------ */
@@ -63,6 +68,8 @@ bl_jump:
      *     dejar en ra?
      */
 
+    lw sp, 0(a0)
+    jalr x0, a1, 0
     j       bl_unexpected
     .size   bl_jump, . - bl_jump
 

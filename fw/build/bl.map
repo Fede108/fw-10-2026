@@ -1,0 +1,191 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+                              /tmp/ccGAYxJO.o (__udivsi3)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 /tmp/ccdr9rkJ.o
+ .data          0x00000000        0x0 /tmp/ccdr9rkJ.o
+ .bss           0x00000000        0x0 /tmp/ccdr9rkJ.o
+ .text          0x00000000        0x0 /tmp/ccSxR6uQ.o
+ .data          0x00000000        0x0 /tmp/ccSxR6uQ.o
+ .bss           0x00000000        0x0 /tmp/ccSxR6uQ.o
+ .text.bl_log_hex
+                0x00000000      0x124 /tmp/ccSxR6uQ.o
+ .text.bl_fail  0x00000000       0x20 /tmp/ccSxR6uQ.o
+ .text          0x00000000        0x0 /tmp/ccGAYxJO.o
+ .data          0x00000000        0x0 /tmp/ccGAYxJO.o
+ .bss           0x00000000        0x0 /tmp/ccGAYxJO.o
+ .text.print_chr
+                0x00000000       0x40 /tmp/ccGAYxJO.o
+ .text.print_dec
+                0x00000000       0xf0 /tmp/ccGAYxJO.o
+ .rodata        0x00000000       0x11 /tmp/ccGAYxJO.o
+ .text.print_hex
+                0x00000000       0xb8 /tmp/ccGAYxJO.o
+ .text.print_flush_buffer
+                0x00000000       0x1c /tmp/ccGAYxJO.o
+ .text          0x00000000        0x0 /tmp/ccl46oJG.o
+ .data          0x00000000        0x0 /tmp/ccl46oJG.o
+ .bss           0x00000000        0x0 /tmp/ccl46oJG.o
+ .text.str_crc8
+                0x00000000       0xc4 /tmp/ccl46oJG.o
+ .debug_info    0x00000000      0x113 /tmp/ccl46oJG.o
+ .debug_abbrev  0x00000000       0xa3 /tmp/ccl46oJG.o
+ .debug_aranges
+                0x00000000       0x20 /tmp/ccl46oJG.o
+ .debug_rnglists
+                0x00000000       0x14 /tmp/ccl46oJG.o
+ .debug_line    0x00000000       0xf6 /tmp/ccl46oJG.o
+ .debug_str     0x00000000      0x14b /tmp/ccl46oJG.o
+ .debug_line_str
+                0x00000000       0xcd /tmp/ccl46oJG.o
+ .comment       0x00000000       0x23 /tmp/ccl46oJG.o
+ .debug_frame   0x00000000       0x34 /tmp/ccl46oJG.o
+ .riscv.attributes
+                0x00000000       0x1c /tmp/ccl46oJG.o
+ .text          0x00000000       0xb4 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .data          0x00000000        0x0 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .bss           0x00000000        0x0 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .debug_line    0x00000000      0x153 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .debug_line_str
+                0x00000000       0xa2 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .debug_info    0x00000000       0x5f /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .debug_abbrev  0x00000000       0x28 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .debug_aranges
+                0x00000000       0x20 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .debug_str     0x00000000       0xe7 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .riscv.attributes
+                0x00000000       0x1a /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+BL_ROM           0x00000000         0x00001000         xr
+APP_ROM          0x00001000         0x0001f000         xr
+RAM              0x00020000         0x00020000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /tmp/ccdr9rkJ.o
+LOAD /tmp/ccSxR6uQ.o
+LOAD /tmp/ccGAYxJO.o
+LOAD /tmp/ccl46oJG.o
+LOAD /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a
+
+.text           0x00000000      0x20c
+ *(.vectors)
+ .vectors       0x00000000       0x10 /tmp/ccdr9rkJ.o
+                0x00000000                _bl_vectors
+ *(.text .text.*)
+ .text.bl_reset_handler
+                0x00000010       0x10 /tmp/ccdr9rkJ.o
+                0x00000010                bl_reset_handler
+ .text.bl_jump  0x00000020        0xc /tmp/ccdr9rkJ.o
+                0x00000020                bl_jump
+ .text.bl_halt  0x0000002c       0x18 /tmp/ccdr9rkJ.o
+                0x0000002c                bl_unexpected
+                0x0000003c                bl_halt
+ .text.bl_main  0x00000044       0x58 /tmp/ccSxR6uQ.o
+                0x00000044                bl_main
+ .text.uart0_send
+                0x0000009c       0xdc /tmp/ccGAYxJO.o
+ .text.print_str
+                0x00000178       0x68 /tmp/ccGAYxJO.o
+                0x00000178                print_str
+ *(.rodata .rodata.* .srodata .srodata.*)
+ .rodata        0x000001e0       0x2b /tmp/ccSxR6uQ.o
+                0x0000020c                        . = ALIGN (0x4)
+ *fill*         0x0000020b        0x1 
+
+.rela.dyn       0x0000020c        0x0
+ .rela.text.bl_reset_handler
+                0x0000020c        0x0 /tmp/ccdr9rkJ.o
+ .rela.text.bl_main
+                0x0000020c        0x0 /tmp/ccdr9rkJ.o
+
+.data
+ *(.data)
+ *(.sdata)
+
+.bss
+ *(.bss)
+ *(.sbss)
+                0x00000001                        ASSERT ((SIZEOF (.data) < 0x1), .data grande)
+                0x00000001                        ASSERT ((SIZEOF (.bss) < 0x1), .bss grande)
+
+/DISCARD/
+ *(.eh_frame .eh_frame_hdr)
+                0x00040000                        _bl_stack_top = (ORIGIN (RAM) + LENGTH (RAM))
+                0x00001000                        __fw_slot_start = ORIGIN (APP_ROM)
+                0x0001f000                        __fw_slot_size = LENGTH (APP_ROM)
+                0x00000001                        ASSERT ((_bl_vectors == 0x0), _bl_vectors direccion erronea)
+OUTPUT(build/bl.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x1c
+ .riscv.attributes
+                0x00000000       0x1a /tmp/ccdr9rkJ.o
+ .riscv.attributes
+                0x0000001a       0x1c /tmp/ccSxR6uQ.o
+ .riscv.attributes
+                0x00000036       0x1c /tmp/ccGAYxJO.o
+
+.comment        0x00000000       0x22
+ .comment       0x00000000       0x22 /tmp/ccSxR6uQ.o
+                                 0x23 (size before relaxing)
+ .comment       0x00000022       0x23 /tmp/ccGAYxJO.o
+
+.debug_line     0x00000000      0x565
+ .debug_line    0x00000000       0xbe /tmp/ccdr9rkJ.o
+ .debug_line    0x000000be      0x1b1 /tmp/ccSxR6uQ.o
+ .debug_line    0x0000026f      0x2f6 /tmp/ccGAYxJO.o
+
+.debug_line_str
+                0x00000000       0xea
+ .debug_line_str
+                0x00000000       0xea /tmp/ccdr9rkJ.o
+                                 0x43 (size before relaxing)
+ .debug_line_str
+                0x000000ea       0xf3 /tmp/ccSxR6uQ.o
+ .debug_line_str
+                0x000000ea       0x82 /tmp/ccGAYxJO.o
+
+.debug_info     0x00000000      0x459
+ .debug_info    0x00000000       0x5c /tmp/ccdr9rkJ.o
+ .debug_info    0x0000005c      0x234 /tmp/ccSxR6uQ.o
+ .debug_info    0x00000290      0x1c9 /tmp/ccGAYxJO.o
+
+.debug_abbrev   0x00000000      0x2a9
+ .debug_abbrev  0x00000000       0x26 /tmp/ccdr9rkJ.o
+ .debug_abbrev  0x00000026      0x19a /tmp/ccSxR6uQ.o
+ .debug_abbrev  0x000001c0       0xe9 /tmp/ccGAYxJO.o
+
+.debug_aranges  0x00000000       0xb0
+ .debug_aranges
+                0x00000000       0x38 /tmp/ccdr9rkJ.o
+ .debug_aranges
+                0x00000038       0x30 /tmp/ccSxR6uQ.o
+ .debug_aranges
+                0x00000068       0x48 /tmp/ccGAYxJO.o
+
+.debug_str      0x00000000      0x2a7
+ .debug_str     0x00000000      0x2a7 /tmp/ccdr9rkJ.o
+                                 0x8a (size before relaxing)
+ .debug_str     0x000002a7      0x231 /tmp/ccSxR6uQ.o
+ .debug_str     0x000002a7       0xff /tmp/ccGAYxJO.o
+
+.debug_rnglists
+                0x00000000       0x79
+ .debug_rnglists
+                0x00000000       0x25 /tmp/ccdr9rkJ.o
+ .debug_rnglists
+                0x00000025       0x20 /tmp/ccSxR6uQ.o
+ .debug_rnglists
+                0x00000045       0x34 /tmp/ccGAYxJO.o
+
+.debug_frame    0x00000000      0x168
+ .debug_frame   0x00000000       0x70 /tmp/ccSxR6uQ.o
+ .debug_frame   0x00000070       0xf8 /tmp/ccGAYxJO.o

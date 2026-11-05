@@ -1,7 +1,7 @@
 
 #include "includes.h"
 
-#define ITERATIONS 20
+#define ITERATIONS 0
 
 volatile int int_0 ;
 volatile int int_1 ;
@@ -13,6 +13,7 @@ void main(){
 
     print_str("-- running test_fw_status --");
     
+    print_str("-- test done! --");
     for(int i=0; i< ITERATIONS; i++){
 
         int_2 = int_0 + int_1;
@@ -22,12 +23,12 @@ void main(){
         int_0 = int_2 + int_1;
         int_0 += 2;
         
-//        int_2 = int_0 * int_1;
-//        int_2 *= 3;
-//        int_1 = int_2 * int_0;
-//        int_1 *= 5;
-//        int_0 = int_2 * int_1;
-//        int_0 *= 9;
+        int_2 = int_0 * int_1;
+        int_2 *= 3;
+        int_1 = int_2 * int_0;
+        int_1 *= 5;
+        int_0 = int_2 * int_1;
+        int_0 *= 9;
 
         print_dec(i);
 

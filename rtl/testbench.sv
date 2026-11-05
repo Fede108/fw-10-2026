@@ -11,7 +11,8 @@ module testbench;
 
     top  u_top (
         .i_clk    (clk    ),
-        .i_resetn (resetn )
+        .i_resetn (resetn ),
+        .trap     (trap)
     );
 
     initial begin
