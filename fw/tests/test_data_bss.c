@@ -71,7 +71,8 @@ void main(void)
         REG_FW_STATUS = 0xFF;
     } else {
         print_str("[FW] test_data_bss: FAIL");
+        REG_FW_STATUS = 0xFF;
         REG_FW_STATUS = 0xBAD;
-        __asm__ volatile ("ebreak");    /* trap: con 0xBAD solo, la simulación no termina */
+//        __asm__ volatile ("ebreak");    /* trap: con 0xBAD solo, la simulación no termina */
     }
 }

@@ -49,8 +49,8 @@ PYTHON ?= python3
 # Flags de firmware (+ -g, que no cambia el código y sirve para gdb/objdump -S)
 # El BL va siempre en rv32i: tiene que arrancar con CUALQUIER configuración de top.v.
 # El FW puede usar el -march del TP2 (rv32ic, rv32imc...) si top.v lo soporta.
-BL_MARCH   = rv32i
-APP_MARCH ?= rv32i
+BL_MARCH   = rv32im
+APP_MARCH ?= rv32im
 COMMON     = -mabi=ilp32 -O0 -ffreestanding -nostdlib -nostartfiles -g -I$(FW_DIR) -I$(FW_LIB)/inc
 
 # BL: una sección por función (--gc-sections tira lo que no usa de print.c), warnings,

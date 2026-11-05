@@ -66,11 +66,12 @@ static void bl_log_hex(const char *msg, uint32_t val)
  *   - REG_FW_REPORT = BL_REPORT_ERROR | code;
  *   - REG_FW_STATUS = 0xBAD;
  *   - y cortar con bl_halt() (¿por qué no alcanza con 0xBAD?). */
-static void __attribute__((noreturn)) bl_fail(enum bl_error code, const char *why)
+static void __attribute__((noreturn)) bl_fail()
 {
-    (void)code;
-    (void)why;
-    bl_halt();
+    REG_FW_STATUS = 0xBAD;
+
+        __asm__ volatile ("ebreak");    /* trap: con 0xBAD solo, la simulación no termina */
+//    bl_halt();
 }
 
 void bl_main(void)
@@ -89,14 +90,35 @@ void bl_main(void)
      *                (3) FW_HDR_SIZE <= image_size <= tamaño del slot  -> si no, BL_ERR_SIZE
      *                (4) str_crc8() de [slot + FW_IMAGE_CRC_START, slot + image_size)
      *                    == image_crc                                  -> si no, BL_ERR_CRC
-     *                (5) initial_sp dentro de la RAM y alineado a 16, reset_handler
-     *                    dentro de la imagen y alineado a 4            -> BL_ERR_SP / BL_ERR_ENTRY
+     *                (5) initial_sp dentro de la RAM y alineado a 16,
+     *                      reset_handler dentro de la imagen y alineado a 4            -> BL_ERR_SP / BL_ERR_ENTRY
      *   Pista: la RAM está en config.h (ADDR_START_DATA, ADDR_SIZE_DATA). */
+    
+    if (hdr->magic != FW_IMAGE_MAGIC)
+        bl_fail();
 
+    if (hdr->load_addr != (uint32_t)&__fw_slot_start)
+        bl_fail();
+    
+    if ( FW_HDR_SIZE > hdr->image_size > (uint32_t)&__fw_slot_size)
+        bl_fail();
+
+    uint8_t* start = (uint8_t*)(&__fw_slot_start);
+    uint32_t crc = str_crc8(start + 0x10,  hdr->image_size +1);
+    if ( hdr->image_crc != crc){
+        bl_log_hex("crc ", crc);
+        bl_fail();
+    }
+
+    if (hdr->initial_sp != ((ADDR_START_DATA + ADDR_SIZE_DATA)) || hdr->initial_sp & 0xF)
+        bl_fail();
+
+    if(hdr->reset_handler > ADDR_START_DATA || hdr->reset_handler & 0x3)
+        bl_fail();
+    
     /* TODO (hito 5) (6) Leer initial_sp y reset_handler de la vector table del FW
      *                    (hdr->...), marcar BL_REPORT_JUMP y saltar con bl_jump(). */
-
-//    bl_log_hex("reset handler ", hdr->reset_handler);
+    REG_FW_REPORT = BL_REPORT_JUMP; 
     bl_jump(hdr->initial_sp, hdr->reset_handler);
     bl_fail(BL_ERR_MAGIC, "[BL] bl_main() retorna del jump"); 
 }

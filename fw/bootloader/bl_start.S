@@ -68,7 +68,8 @@ bl_jump:
      *     dejar en ra?
      */
 
-    lw sp, 0(a0)
+    sw a0, 0(sp)
+    lw sp, 0(sp)
     jalr x0, a1, 0
     j       bl_unexpected
     .size   bl_jump, . - bl_jump

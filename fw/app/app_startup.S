@@ -25,7 +25,7 @@ __fw_header:
     .word   FW_IMAGE_MAGIC          /* 0x00 magic          (TODO) */
     .word   __fw_start              /* 0x04 load_addr      (TODO) */
     .word   __fw_size               /* 0x08 image_size     (TODO) */
-    .word   0                       /* 0x0C image_crc      (TODO) */
+    .word  FW_IMAGE_CRC_UNSET        /* 0x0C image_crc      (TODO) */
     .word   _stack_top              /* 0x10 initial_sp     (TODO) */
     .word   Reset_Handler          /* 0x14 reset_handler  (TODO) */
     .size   __fw_header, . - __fw_header
@@ -47,9 +47,7 @@ Reset_Handler:
      *      (¿qué pasa con la simulación si no lo hacen?)
      */
 
-            
-    j call_main
-     
+
     la t0, _sdata
     la t1, _sidata
     la t2, _edata
@@ -71,11 +69,13 @@ loop_bss:
     bne t0, t1, loop_bss
 
 call_main:
-    j main
+    jal ra, main
+    ebreak
+    unimp
     li      t0, REG_FW_STATUS_ADDR
     li      t1, FW_STATUS_PASS
     sw      t1, 0(t0)
     ebreak
-
+    
 1:  j       1b
     .size   Reset_Handler, . - Reset_Handler
