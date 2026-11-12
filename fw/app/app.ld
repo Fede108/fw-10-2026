@@ -47,13 +47,13 @@ SECTIONS
 
     /DISCARD/ : { *(.eh_frame .eh_frame_hdr) }
     
-    _stack_top = ORIGIN(RAM) + LENGTH(RAM);
 }
 
-/* Fin de la imagen cargable = fin de la copia de .data dentro de APP_ROM */
-__fw_end   = _sidata + (_edata - _sdata);
-__fw_size  = __fw_end - __fw_start;
 _stack_top = ORIGIN(RAM) + LENGTH(RAM);
+
+__fw_start = ORIGIN(APP_ROM);
+__fw_end = _sidata + SIZEOF(.data);
+__fw_size = __fw_end - __fw_start;
 
 ASSERT(__fw_start == ORIGIN(APP_ROM),
        "TP4/FW: el header del FW tiene que quedar al principio de APP_ROM")

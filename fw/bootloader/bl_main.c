@@ -103,7 +103,8 @@ void bl_main(void)
         bl_log_hex("crc ", crc);
         bl_fail(BL_ERR_CRC, "ERR CRC");
     }
-
+    bl_halt();
+    
     if (hdr->initial_sp != ((ADDR_START_DATA + ADDR_SIZE_DATA)) || hdr->initial_sp & 0xF)
         bl_fail(BL_ERR_SP, "ERR SP");
 

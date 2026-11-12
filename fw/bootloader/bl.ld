@@ -37,13 +37,11 @@ SECTIONS
     ASSERT(SIZEOF(.bss)<1, ".bss grande") 
 
     /DISCARD/ : { *(.eh_frame .eh_frame_hdr) }
-
-    /* TODO: _bl_stack_top (lo usa bl_start.S). ¿Donde conviene que quede el stack del BL? */
-   _bl_stack_top = ORIGIN(RAM) + LENGTH(RAM);
-
 }
 
-* Donde espera el BL encontrar al FW (los usa bl_main.c como extern) */
+_bl_stack_top = ORIGIN(RAM) + LENGTH(RAM);
+
+
 __fw_slot_start = ORIGIN(APP_ROM);
 __fw_slot_size  = LENGTH(APP_ROM);
 

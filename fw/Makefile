@@ -64,7 +64,7 @@ APP_MARCH ?= rv32i
 COMMON     = -mabi=ilp32 -O2 -ffreestanding -nostdlib -nostartfiles -g -I$(FW_DIR) -I$(FW_LIB)/inc -I$(FW_DIR)/drivers/inc -I$(FW_DIR)/app -I$(FW_DIR)/tests $(EXTRA_CFLAGS)
 =======
 BL_MARCH   = rv32im
-APP_MARCH ?= rv32im
+APP_MARCH ?= rv32i
 COMMON     = -mabi=ilp32 -O0 -ffreestanding -nostdlib -nostartfiles -g -I$(FW_DIR) -I$(FW_LIB)/inc
 
 >>>>>>> 5571411 (hito 7)

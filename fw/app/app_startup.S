@@ -40,7 +40,7 @@ __fw_header:
 Reset_Handler:
     la      sp, _stack_top
 
-
+    la sp, _stack_top
     la t0, _sdata
     la t1, _sidata
     la t2, _edata
@@ -50,7 +50,7 @@ copy_data:
     sw a0, 0(t0)
     addi t0, t0,  4
     addi t1, t1,  4
-    bne t0, t2, copy_data
+    blt t0, t2, copy_data
 
 limpiar_bss:
     la t0, _sbss
@@ -59,13 +59,10 @@ limpiar_bss:
 loop_bss:
     sw x0, 0(t0)
     addi t0, t0, 4
-    bne t0, t1, loop_bss
+    blt t0, t1, loop_bss
 
 call_main:
-    jal ra, main
-    li      t0, REG_FW_STATUS_ADDR
-    li      t1, FW_STATUS_PASS
-    sw      t1, 0(t0)
-    
+    call main
+    ebreak 
 1:  j       1b
     .size   Reset_Handler, . - Reset_Handler
