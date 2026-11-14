@@ -30,8 +30,8 @@ module top #() (
         .CATCH_ILLINSN        (   ), //default: 1
         .ENABLE_PCPI          (   ), //default: 0
         .ENABLE_MUL           (1 ), //default: 0
-        .ENABLE_FAST_MUL      (1  ), //default: 0
-        .ENABLE_DIV           (1 ), //default: 0
+        .ENABLE_FAST_MUL      (0  ), //default: 0
+        .ENABLE_DIV           (0 ), //default: 0
         .ENABLE_IRQ           (   ), //default: 0
         .ENABLE_IRQ_QREGS     (   ), //default: 1
         .ENABLE_IRQ_TIMER     (   ), //default: 1

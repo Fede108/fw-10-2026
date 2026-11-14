@@ -5,365 +5,365 @@ make[2]: Nothing to be done for 'default'.
 make[2]: Leaving directory '/home/ignafede/ing-comp/fw-10-2026/obj_dir'
 - V e r i l a t i o n   R e p o r t: Verilator 5.036 2025-04-27 rev v5.036
 - Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
-- Verilator: Walltime 0.035 s (elab=0.000, cvt=0.000, bld=0.033); cpu 0.002 s on 1 threads; alloced 8.418 MB
+- Verilator: Walltime 0.389 s (elab=0.000, cvt=0.000, bld=0.347); cpu 0.002 s on 1 threads; alloced 8.418 MB
 ./obj_dir/Vtestbench
 loading: 00000000 -> 014000ef
-loading: 00000001 -> 020000ef
-loading: 00000002 -> 01c000ef
-loading: 00000003 -> 018000ef
-loading: 00000004 -> 014000ef
+loading: 00000001 -> 030000ef
+loading: 00000002 -> 02c000ef
+loading: 00000003 -> 028000ef
+loading: 00000004 -> 024000ef
 loading: 00000005 -> 00040117
 loading: 00000006 -> fec10113
-loading: 00000007 -> 1900006f
-loading: 00000008 -> 0040006f
-loading: 00000009 -> 000402b7
-loading: 0000000a -> 00001337
-loading: 0000000b -> bad30313
-loading: 0000000c -> 0062a023
-loading: 0000000d -> 00100073
-loading: 0000000e -> 0000006f
-loading: 0000000f -> f9010113
-loading: 00000010 -> 06112623
-loading: 00000011 -> 06812423
-loading: 00000012 -> 07010413
-loading: 00000013 -> f8a42e23
-loading: 00000014 -> f8b42c23
-loading: 00000015 -> fe042623
-loading: 00000016 -> 02c0006f
-loading: 00000017 -> f9c42703
-loading: 00000018 -> 00170793
-loading: 00000019 -> f8f42e23
-loading: 0000001a -> fec42783
-loading: 0000001b -> 00178693
-loading: 0000001c -> fed42623
-loading: 0000001d -> 00074703
-loading: 0000001e -> ff078793
-loading: 0000001f -> 008787b3
-loading: 00000020 -> fae78c23
-loading: 00000021 -> f9c42783
-loading: 00000022 -> 0007c783
-loading: 00000023 -> 00078863
-loading: 00000024 -> fec42703
-loading: 00000025 -> 03400793
-loading: 00000026 -> fce7f2e3
-loading: 00000027 -> fec42783
-loading: 00000028 -> 00178713
-loading: 00000029 -> fee42623
-loading: 0000002a -> ff078793
-loading: 0000002b -> 008787b3
-loading: 0000002c -> 03000713
-loading: 0000002d -> fae78c23
-loading: 0000002e -> fec42783
-loading: 0000002f -> 00178713
-loading: 00000030 -> fee42623
-loading: 00000031 -> ff078793
-loading: 00000032 -> 008787b3
-loading: 00000033 -> 07800713
-loading: 00000034 -> fae78c23
-loading: 00000035 -> 01c00793
-loading: 00000036 -> fef42423
-loading: 00000037 -> 0440006f
-loading: 00000038 -> fe842783
-loading: 00000039 -> f9842703
-loading: 0000003a -> 00f757b3
-loading: 0000003b -> 00f7f713
-loading: 0000003c -> fec42783
-loading: 0000003d -> 00178693
-loading: 0000003e -> fed42623
-loading: 0000003f -> 49000693
-loading: 00000040 -> 00e68733
-loading: 00000041 -> 00074703
-loading: 00000042 -> ff078793
-loading: 00000043 -> 008787b3
-loading: 00000044 -> fae78c23
-loading: 00000045 -> fe842783
-loading: 00000046 -> ffc78793
-loading: 00000047 -> fef42423
-loading: 00000048 -> fe842783
-loading: 00000049 -> fa07dee3
-loading: 0000004a -> fec42783
-loading: 0000004b -> ff078793
-loading: 0000004c -> 008787b3
-loading: 0000004d -> fa078c23
-loading: 0000004e -> fa840793
-loading: 0000004f -> 00078513
-loading: 00000050 -> 224000ef
-loading: 00000051 -> 00000013
-loading: 00000052 -> 06c12083
-loading: 00000053 -> 06812403
-loading: 00000054 -> 07010113
-loading: 00000055 -> 00008067
-loading: 00000056 -> fe010113
-loading: 00000057 -> 00112e23
-loading: 00000058 -> 00812c23
-loading: 00000059 -> 02010413
-loading: 0000005a -> fea42623
-loading: 0000005b -> feb42423
-loading: 0000005c -> 000407b7
-loading: 0000005d -> 00478793
-loading: 0000005e -> fec42683
-loading: 0000005f -> b007e737
-loading: 00000060 -> 00e6e733
-loading: 00000061 -> 00e7a023
-loading: 00000062 -> 000407b7
-loading: 00000063 -> 00001737
-loading: 00000064 -> bad70713
+loading: 00000007 -> 1a00006f
+loading: 00000008 -> 0140006f
+loading: 00000009 -> 00a12023
+loading: 0000000a -> 00012103
+loading: 0000000b -> 00058067
+loading: 0000000c -> 0040006f
+loading: 0000000d -> 000402b7
+loading: 0000000e -> 00001337
+loading: 0000000f -> bad30313
+loading: 00000010 -> 0062a023
+loading: 00000011 -> 00100073
+loading: 00000012 -> 0000006f
+loading: 00000013 -> f9010113
+loading: 00000014 -> 06112623
+loading: 00000015 -> 06812423
+loading: 00000016 -> 07010413
+loading: 00000017 -> f8a42e23
+loading: 00000018 -> f8b42c23
+loading: 00000019 -> fe042623
+loading: 0000001a -> 02c0006f
+loading: 0000001b -> f9c42703
+loading: 0000001c -> 00170793
+loading: 0000001d -> f8f42e23
+loading: 0000001e -> fec42783
+loading: 0000001f -> 00178693
+loading: 00000020 -> fed42623
+loading: 00000021 -> 00074703
+loading: 00000022 -> ff078793
+loading: 00000023 -> 008787b3
+loading: 00000024 -> fae78c23
+loading: 00000025 -> f9c42783
+loading: 00000026 -> 0007c783
+loading: 00000027 -> 00078863
+loading: 00000028 -> fec42703
+loading: 00000029 -> 03400793
+loading: 0000002a -> fce7f2e3
+loading: 0000002b -> fec42783
+loading: 0000002c -> 00178713
+loading: 0000002d -> fee42623
+loading: 0000002e -> ff078793
+loading: 0000002f -> 008787b3
+loading: 00000030 -> 03000713
+loading: 00000031 -> fae78c23
+loading: 00000032 -> fec42783
+loading: 00000033 -> 00178713
+loading: 00000034 -> fee42623
+loading: 00000035 -> ff078793
+loading: 00000036 -> 008787b3
+loading: 00000037 -> 07800713
+loading: 00000038 -> fae78c23
+loading: 00000039 -> 01c00793
+loading: 0000003a -> fef42423
+loading: 0000003b -> 0440006f
+loading: 0000003c -> fe842783
+loading: 0000003d -> f9842703
+loading: 0000003e -> 00f757b3
+loading: 0000003f -> 00f7f713
+loading: 00000040 -> fec42783
+loading: 00000041 -> 00178693
+loading: 00000042 -> fed42623
+loading: 00000043 -> 52400693
+loading: 00000044 -> 00e68733
+loading: 00000045 -> 00074703
+loading: 00000046 -> ff078793
+loading: 00000047 -> 008787b3
+loading: 00000048 -> fae78c23
+loading: 00000049 -> fe842783
+loading: 0000004a -> ffc78793
+loading: 0000004b -> fef42423
+loading: 0000004c -> fe842783
+loading: 0000004d -> fa07dee3
+loading: 0000004e -> fec42783
+loading: 0000004f -> ff078793
+loading: 00000050 -> 008787b3
+loading: 00000051 -> fa078c23
+loading: 00000052 -> fa840793
+loading: 00000053 -> 00078513
+loading: 00000054 -> 2a8000ef
+loading: 00000055 -> 00000013
+loading: 00000056 -> 06c12083
+loading: 00000057 -> 06812403
+loading: 00000058 -> 07010113
+loading: 00000059 -> 00008067
+loading: 0000005a -> fe010113
+loading: 0000005b -> 00112e23
+loading: 0000005c -> 00812c23
+loading: 0000005d -> 02010413
+loading: 0000005e -> fea42623
+loading: 0000005f -> feb42423
+loading: 00000060 -> 000407b7
+loading: 00000061 -> 00478793
+loading: 00000062 -> fec42683
+loading: 00000063 -> b007e737
+loading: 00000064 -> 00e6e733
 loading: 00000065 -> 00e7a023
-loading: 00000066 -> fe842503
-loading: 00000067 -> 1c8000ef
-loading: 00000068 -> 4a400513
-loading: 00000069 -> 1c0000ef
-loading: 0000006a -> e8dff0ef
-loading: 0000006b -> fe010113
-loading: 0000006c -> 00112e23
-loading: 0000006d -> 00812c23
-loading: 0000006e -> 02010413
-loading: 0000006f -> 000017b7
-loading: 00000070 -> 00078793
-loading: 00000071 -> fef42223
-loading: 00000072 -> 000407b7
-loading: 00000073 -> 0007a023
-loading: 00000074 -> 000407b7
-loading: 00000075 -> 00478793
-loading: 00000076 -> b0070737
-loading: 00000077 -> 00e7a023
-loading: 00000078 -> 4a800513
-loading: 00000079 -> 180000ef
-loading: 0000007a -> fe442783
-loading: 0000007b -> 0007a703
-loading: 0000007c -> 463457b7
-loading: 0000007d -> 05478793
-loading: 0000007e -> 00f70863
-loading: 0000007f -> 4c000593
-loading: 00000080 -> 00100513
-loading: 00000081 -> f55ff0ef
-loading: 00000082 -> fe442783
-loading: 00000083 -> 0047a703
-loading: 00000084 -> 000017b7
-loading: 00000085 -> 00078793
-loading: 00000086 -> 00f70863
-loading: 00000087 -> 4cc00593
-loading: 00000088 -> 00200513
-loading: 00000089 -> f35ff0ef
-loading: 0000008a -> 000017b7
-loading: 0000008b -> 00078793
-loading: 0000008c -> fef42423
-loading: 0000008d -> fe842783
-loading: 0000008e -> 01078713
-loading: 0000008f -> fe442783
-loading: 00000090 -> 0087a783
-loading: 00000091 -> ff078793
-loading: 00000092 -> 00078593
-loading: 00000093 -> 00070513
-loading: 00000094 -> 17c000ef
-loading: 00000095 -> 00050793
-loading: 00000096 -> fef42623
-loading: 00000097 -> fe442783
-loading: 00000098 -> 00c7a783
-loading: 00000099 -> fec42703
-loading: 0000009a -> 00f70e63
-loading: 0000009b -> fec42583
-loading: 0000009c -> 4dc00513
-loading: 0000009d -> dc9ff0ef
-loading: 0000009e -> 4e400593
-loading: 0000009f -> 00400513
-loading: 000000a0 -> ed9ff0ef
-loading: 000000a1 -> db1ff0ef
-loading: 000000a2 -> fd010113
-loading: 000000a3 -> 02812623
-loading: 000000a4 -> 03010413
-loading: 000000a5 -> fca42e23
-loading: 000000a6 -> fcb42c23
-loading: 000000a7 -> fd842783
-loading: 000000a8 -> 0a078a63
-loading: 000000a9 -> fd842703
-loading: 000000aa -> 10000793
-loading: 000000ab -> 00e7f663
-loading: 000000ac -> 10000793
-loading: 000000ad -> fcf42c23
-loading: 000000ae -> 00000013
-loading: 000000af -> 000427b7
-loading: 000000b0 -> 00c78793
-loading: 000000b1 -> 0007a783
-loading: 000000b2 -> fe078ae3
-loading: 000000b3 -> fe042623
-loading: 000000b4 -> 03c0006f
-loading: 000000b5 -> fdc42703
-loading: 000000b6 -> fec42783
-loading: 000000b7 -> 00f707b3
-loading: 000000b8 -> 0007c683
-loading: 000000b9 -> fec42783
-loading: 000000ba -> 00279713
-loading: 000000bb -> 000427b7
-loading: 000000bc -> 01078793
-loading: 000000bd -> 00f707b3
-loading: 000000be -> 00068713
+loading: 00000066 -> 000407b7
+loading: 00000067 -> 00001737
+loading: 00000068 -> bad70713
+loading: 00000069 -> 00e7a023
+loading: 0000006a -> fe842503
+loading: 0000006b -> 24c000ef
+loading: 0000006c -> 53800513
+loading: 0000006d -> 244000ef
+loading: 0000006e -> e8dff0ef
+loading: 0000006f -> fe010113
+loading: 00000070 -> 00112e23
+loading: 00000071 -> 00812c23
+loading: 00000072 -> 02010413
+loading: 00000073 -> 000017b7
+loading: 00000074 -> 00078793
+loading: 00000075 -> fef42623
+loading: 00000076 -> 000407b7
+loading: 00000077 -> 0007a023
+loading: 00000078 -> 000407b7
+loading: 00000079 -> 00478793
+loading: 0000007a -> b0070737
+loading: 0000007b -> 00e7a023
+loading: 0000007c -> 53c00513
+loading: 0000007d -> 204000ef
+loading: 0000007e -> fec42783
+loading: 0000007f -> 0007a703
+loading: 00000080 -> 463457b7
+loading: 00000081 -> 05478793
+loading: 00000082 -> 00f70863
+loading: 00000083 -> 55400593
+loading: 00000084 -> 00100513
+loading: 00000085 -> f55ff0ef
+loading: 00000086 -> fec42783
+loading: 00000087 -> 0047a703
+loading: 00000088 -> 000017b7
+loading: 00000089 -> 00078793
+loading: 0000008a -> 00f70863
+loading: 0000008b -> 56000593
+loading: 0000008c -> 00200513
+loading: 0000008d -> f35ff0ef
+loading: 0000008e -> 000017b7
+loading: 0000008f -> 00078793
+loading: 00000090 -> fef42423
+loading: 00000091 -> fe842783
+loading: 00000092 -> 01078713
+loading: 00000093 -> fec42783
+loading: 00000094 -> 0087a783
+loading: 00000095 -> ff078793
+loading: 00000096 -> 00078593
+loading: 00000097 -> 00070513
+loading: 00000098 -> 200000ef
+loading: 00000099 -> 00050793
+loading: 0000009a -> fef42223
+loading: 0000009b -> fec42783
+loading: 0000009c -> 00c7a783
+loading: 0000009d -> fe442703
+loading: 0000009e -> 00f70e63
+loading: 0000009f -> fe442583
+loading: 000000a0 -> 57000513
+loading: 000000a1 -> dc9ff0ef
+loading: 000000a2 -> 57800593
+loading: 000000a3 -> 00400513
+loading: 000000a4 -> ed9ff0ef
+loading: 000000a5 -> fec42783
+loading: 000000a6 -> 0107a703
+loading: 000000a7 -> 000407b7
+loading: 000000a8 -> 00f71a63
+loading: 000000a9 -> fec42783
+loading: 000000aa -> 0107a783
+loading: 000000ab -> 00f7f793
+loading: 000000ac -> 00078863
+loading: 000000ad -> 58000593
+loading: 000000ae -> 00600513
+loading: 000000af -> eadff0ef
+loading: 000000b0 -> fec42783
+loading: 000000b1 -> 0147a703
+loading: 000000b2 -> 000207b7
+loading: 000000b3 -> 00e7ea63
+loading: 000000b4 -> fec42783
+loading: 000000b5 -> 0147a783
+loading: 000000b6 -> 0037f793
+loading: 000000b7 -> 00078863
+loading: 000000b8 -> 58800593
+loading: 000000b9 -> 00500513
+loading: 000000ba -> e81ff0ef
+loading: 000000bb -> 000407b7
+loading: 000000bc -> 00478793
+loading: 000000bd -> b0070737
+loading: 000000be -> 20070713
 loading: 000000bf -> 00e7a023
 loading: 000000c0 -> fec42783
-loading: 000000c1 -> 00178793
-loading: 000000c2 -> fef42623
-loading: 000000c3 -> fec42703
-loading: 000000c4 -> fd842783
-loading: 000000c5 -> fcf760e3
-loading: 000000c6 -> 000427b7
-loading: 000000c7 -> 00878793
-loading: 000000c8 -> fd842703
-loading: 000000c9 -> 00e7a023
-loading: 000000ca -> 000427b7
-loading: 000000cb -> 00100713
-loading: 000000cc -> 00e7a023
-loading: 000000cd -> 000427b7
-loading: 000000ce -> 0007a023
-loading: 000000cf -> 00000013
-loading: 000000d0 -> 000427b7
-loading: 000000d1 -> 00c78793
-loading: 000000d2 -> 0007a783
-loading: 000000d3 -> fe078ae3
-loading: 000000d4 -> 0080006f
-loading: 000000d5 -> 00000013
-loading: 000000d6 -> 02c12403
-loading: 000000d7 -> 03010113
-loading: 000000d8 -> 00008067
-loading: 000000d9 -> fd010113
-loading: 000000da -> 02112623
-loading: 000000db -> 02812423
-loading: 000000dc -> 03010413
-loading: 000000dd -> fca42e23
-loading: 000000de -> fe042623
-loading: 000000df -> 0100006f
-loading: 000000e0 -> fec42783
-loading: 000000e1 -> 00178793
-loading: 000000e2 -> fef42623
-loading: 000000e3 -> fdc42703
-loading: 000000e4 -> fec42783
-loading: 000000e5 -> 00f707b3
-loading: 000000e6 -> 0007c783
-loading: 000000e7 -> 00078863
+loading: 000000c1 -> 0107a703
+loading: 000000c2 -> fec42783
+loading: 000000c3 -> 0147a783
+loading: 000000c4 -> 00078593
+loading: 000000c5 -> 00070513
+loading: 000000c6 -> d0dff0ef
+loading: 000000c7 -> fd010113
+loading: 000000c8 -> 02812623
+loading: 000000c9 -> 03010413
+loading: 000000ca -> fca42e23
+loading: 000000cb -> fcb42c23
+loading: 000000cc -> fd842783
+loading: 000000cd -> 0a078a63
+loading: 000000ce -> fd842703
+loading: 000000cf -> 10000793
+loading: 000000d0 -> 00e7f663
+loading: 000000d1 -> 10000793
+loading: 000000d2 -> fcf42c23
+loading: 000000d3 -> 00000013
+loading: 000000d4 -> 000427b7
+loading: 000000d5 -> 00c78793
+loading: 000000d6 -> 0007a783
+loading: 000000d7 -> fe078ae3
+loading: 000000d8 -> fe042623
+loading: 000000d9 -> 03c0006f
+loading: 000000da -> fdc42703
+loading: 000000db -> fec42783
+loading: 000000dc -> 00f707b3
+loading: 000000dd -> 0007c683
+loading: 000000de -> fec42783
+loading: 000000df -> 00279713
+loading: 000000e0 -> 000427b7
+loading: 000000e1 -> 01078793
+loading: 000000e2 -> 00f707b3
+loading: 000000e3 -> 00068713
+loading: 000000e4 -> 00e7a023
+loading: 000000e5 -> fec42783
+loading: 000000e6 -> 00178793
+loading: 000000e7 -> fef42623
 loading: 000000e8 -> fec42703
-loading: 000000e9 -> 0ff00793
-loading: 000000ea -> fce7fce3
-loading: 000000eb -> fec42583
-loading: 000000ec -> fdc42503
-loading: 000000ed -> ed5ff0ef
-loading: 000000ee -> 00000013
-loading: 000000ef -> 02c12083
-loading: 000000f0 -> 02812403
-loading: 000000f1 -> 03010113
-loading: 000000f2 -> 00008067
-loading: 000000f3 -> fd010113
-loading: 000000f4 -> 02812623
-loading: 000000f5 -> 03010413
-loading: 000000f6 -> fca42e23
-loading: 000000f7 -> fcb42c23
-loading: 000000f8 -> fff00793
-loading: 000000f9 -> fef407a3
-loading: 000000fa -> fe042423
-loading: 000000fb -> 0840006f
-loading: 000000fc -> fdc42703
-loading: 000000fd -> fe842783
-loading: 000000fe -> 00f707b3
-loading: 000000ff -> 0007c783
-loading: 00000100 -> fef44703
-loading: 00000101 -> 00e7c7b3
-loading: 00000102 -> fef407a3
-loading: 00000103 -> fe0403a3
-loading: 00000104 -> 0480006f
-loading: 00000105 -> fef40783
-loading: 00000106 -> 0207d463
-loading: 00000107 -> fef40783
-loading: 00000108 -> 00179793
-loading: 00000109 -> 01879793
-loading: 0000010a -> 4187d793
-loading: 0000010b -> 0077c793
-loading: 0000010c -> 01879793
-loading: 0000010d -> 4187d793
-loading: 0000010e -> fef407a3
-loading: 0000010f -> 0100006f
-loading: 00000110 -> fef44783
-loading: 00000111 -> 00179793
-loading: 00000112 -> fef407a3
-loading: 00000113 -> fe744783
-loading: 00000114 -> 00178793
-loading: 00000115 -> fef403a3
-loading: 00000116 -> fe744703
-loading: 00000117 -> 00700793
-loading: 00000118 -> fae7fae3
-loading: 00000119 -> fe842783
-loading: 0000011a -> 00178793
-loading: 0000011b -> fef42423
-loading: 0000011c -> fe842703
-loading: 0000011d -> fd842783
-loading: 0000011e -> f6f76ce3
-loading: 0000011f -> fef44783
-loading: 00000120 -> 00078513
-loading: 00000121 -> 02c12403
-loading: 00000122 -> 03010113
-loading: 00000123 -> 00008067
-loading: 00000124 -> 33323130
-loading: 00000125 -> 37363534
-loading: 00000126 -> 42413938
-loading: 00000127 -> 46454443
-loading: 00000128 -> 00000000
-loading: 00000129 -> 0000000a
-loading: 0000012a -> 746f6f62
-loading: 0000012b -> 64616f6c
-loading: 0000012c -> 66207265
-loading: 0000012d -> 69636e75
-loading: 0000012e -> 6e616e6f
-loading: 0000012f -> 00006f64
-loading: 00000130 -> 20525245
-loading: 00000131 -> 4947414d
-loading: 00000132 -> 00000043
-loading: 00000133 -> 20525245
-loading: 00000134 -> 44414f4c
-loading: 00000135 -> 44444120
-loading: 00000136 -> 00000052
-loading: 00000137 -> 20637263
-loading: 00000138 -> 00000000
-loading: 00000139 -> 20525245
-loading: 0000013a -> 00435243
-loading: 0000013b -> 00000000
-loading: 0000013c -> 00000000
-loading: 0000013d -> 00000000
-loading: 0000013e -> 00000000
-loading: 0000013f -> 00000000
-loading: 00000140 -> 00000000
-loading: 00000141 -> 00000000
-loading: 00000142 -> 00000000
-loading: 00000143 -> 00000000
-loading: 00000144 -> 00000000
-loading: 00000145 -> 00000000
-loading: 00000146 -> 00000000
-loading: 00000147 -> 00000000
-loading: 00000148 -> 00000000
-loading: 00000149 -> 00000000
-loading: 0000014a -> 00000000
-loading: 0000014b -> 00000000
-loading: 0000014c -> 00000000
+loading: 000000e9 -> fd842783
+loading: 000000ea -> fcf760e3
+loading: 000000eb -> 000427b7
+loading: 000000ec -> 00878793
+loading: 000000ed -> fd842703
+loading: 000000ee -> 00e7a023
+loading: 000000ef -> 000427b7
+loading: 000000f0 -> 00100713
+loading: 000000f1 -> 00e7a023
+loading: 000000f2 -> 000427b7
+loading: 000000f3 -> 0007a023
+loading: 000000f4 -> 00000013
+loading: 000000f5 -> 000427b7
+loading: 000000f6 -> 00c78793
+loading: 000000f7 -> 0007a783
+loading: 000000f8 -> fe078ae3
+loading: 000000f9 -> 0080006f
+loading: 000000fa -> 00000013
+loading: 000000fb -> 02c12403
+loading: 000000fc -> 03010113
+loading: 000000fd -> 00008067
+loading: 000000fe -> fd010113
+loading: 000000ff -> 02112623
+loading: 00000100 -> 02812423
+loading: 00000101 -> 03010413
+loading: 00000102 -> fca42e23
+loading: 00000103 -> fe042623
+loading: 00000104 -> 0100006f
+loading: 00000105 -> fec42783
+loading: 00000106 -> 00178793
+loading: 00000107 -> fef42623
+loading: 00000108 -> fdc42703
+loading: 00000109 -> fec42783
+loading: 0000010a -> 00f707b3
+loading: 0000010b -> 0007c783
+loading: 0000010c -> 00078863
+loading: 0000010d -> fec42703
+loading: 0000010e -> 0ff00793
+loading: 0000010f -> fce7fce3
+loading: 00000110 -> fec42583
+loading: 00000111 -> fdc42503
+loading: 00000112 -> ed5ff0ef
+loading: 00000113 -> 00000013
+loading: 00000114 -> 02c12083
+loading: 00000115 -> 02812403
+loading: 00000116 -> 03010113
+loading: 00000117 -> 00008067
+loading: 00000118 -> fd010113
+loading: 00000119 -> 02812623
+loading: 0000011a -> 03010413
+loading: 0000011b -> fca42e23
+loading: 0000011c -> fcb42c23
+loading: 0000011d -> fff00793
+loading: 0000011e -> fef407a3
+loading: 0000011f -> fe042423
+loading: 00000120 -> 0840006f
+loading: 00000121 -> fdc42703
+loading: 00000122 -> fe842783
+loading: 00000123 -> 00f707b3
+loading: 00000124 -> 0007c783
+loading: 00000125 -> fef44703
+loading: 00000126 -> 00e7c7b3
+loading: 00000127 -> fef407a3
+loading: 00000128 -> fe0403a3
+loading: 00000129 -> 0480006f
+loading: 0000012a -> fef40783
+loading: 0000012b -> 0207d463
+loading: 0000012c -> fef40783
+loading: 0000012d -> 00179793
+loading: 0000012e -> 01879793
+loading: 0000012f -> 4187d793
+loading: 00000130 -> 0077c793
+loading: 00000131 -> 01879793
+loading: 00000132 -> 4187d793
+loading: 00000133 -> fef407a3
+loading: 00000134 -> 0100006f
+loading: 00000135 -> fef44783
+loading: 00000136 -> 00179793
+loading: 00000137 -> fef407a3
+loading: 00000138 -> fe744783
+loading: 00000139 -> 00178793
+loading: 0000013a -> fef403a3
+loading: 0000013b -> fe744703
+loading: 0000013c -> 00700793
+loading: 0000013d -> fae7fae3
+loading: 0000013e -> fe842783
+loading: 0000013f -> 00178793
+loading: 00000140 -> fef42423
+loading: 00000141 -> fe842703
+loading: 00000142 -> fd842783
+loading: 00000143 -> f6f76ce3
+loading: 00000144 -> fef44783
+loading: 00000145 -> 00078513
+loading: 00000146 -> 02c12403
+loading: 00000147 -> 03010113
+loading: 00000148 -> 00008067
+loading: 00000149 -> 33323130
+loading: 0000014a -> 37363534
+loading: 0000014b -> 42413938
+loading: 0000014c -> 46454443
 loading: 0000014d -> 00000000
-loading: 0000014e -> 00000000
-loading: 0000014f -> 00000000
-loading: 00000150 -> 00000000
-loading: 00000151 -> 00000000
-loading: 00000152 -> 00000000
-loading: 00000153 -> 00000000
-loading: 00000154 -> 00000000
-loading: 00000155 -> 00000000
-loading: 00000156 -> 00000000
-loading: 00000157 -> 00000000
-loading: 00000158 -> 00000000
-loading: 00000159 -> 00000000
-loading: 0000015a -> 00000000
-loading: 0000015b -> 00000000
-loading: 0000015c -> 00000000
+loading: 0000014e -> 0000000a
+loading: 0000014f -> 746f6f62
+loading: 00000150 -> 64616f6c
+loading: 00000151 -> 66207265
+loading: 00000152 -> 69636e75
+loading: 00000153 -> 6e616e6f
+loading: 00000154 -> 00006f64
+loading: 00000155 -> 20525245
+loading: 00000156 -> 4947414d
+loading: 00000157 -> 00000043
+loading: 00000158 -> 20525245
+loading: 00000159 -> 44414f4c
+loading: 0000015a -> 44444120
+loading: 0000015b -> 00000052
+loading: 0000015c -> 20637263
 loading: 0000015d -> 00000000
-loading: 0000015e -> 00000000
-loading: 0000015f -> 00000000
-loading: 00000160 -> 00000000
-loading: 00000161 -> 00000000
-loading: 00000162 -> 00000000
-loading: 00000163 -> 00000000
-loading: 00000164 -> 00000000
+loading: 0000015e -> 20525245
+loading: 0000015f -> 00435243
+loading: 00000160 -> 20525245
+loading: 00000161 -> 00005053
+loading: 00000162 -> 20525245
+loading: 00000163 -> 52544e45
+loading: 00000164 -> 00000059
 loading: 00000165 -> 00000000
 loading: 00000166 -> 00000000
 loading: 00000167 -> 00000000
@@ -1468,14 +1468,86 @@ loading: 000005b1 -> 656e6f64
 loading: 000005b2 -> 2d2d2021
 loading: 000005b3 -> 00000000
 [36mUART: bootloader funcionando[0m
------- TRAP! ------- clock_counts =              1142665
+[36mUART: -- running test_fw_status --[0m
+[36mUART: 0[0m
+[36mUART: 0[0m
+[36mUART: 0[0m
+[36mUART: 0[0m
+[36mUART: 1[0m
+[36mUART: 1[0m
+[36mUART: 1[0m
+[36mUART: 1[0m
+[36mUART: 2[0m
+[36mUART: 2[0m
+[36mUART: 2[0m
+[36mUART: 2[0m
+[36mUART: 3[0m
+[36mUART: 3[0m
+[36mUART: 3[0m
+[36mUART: 3[0m
+[36mUART: 4[0m
+[36mUART: 4[0m
+[36mUART: 4[0m
+[36mUART: 4[0m
+[36mUART: 5[0m
+[36mUART: 5[0m
+[36mUART: 5[0m
+[36mUART: 5[0m
+[36mUART: 6[0m
+[36mUART: 6[0m
+[36mUART: 6[0m
+[36mUART: 6[0m
+[36mUART: 7[0m
+[36mUART: 7[0m
+[36mUART: 7[0m
+[36mUART: 7[0m
+[36mUART: 8[0m
+[36mUART: 8[0m
+[36mUART: 8[0m
+[36mUART: 8[0m
+[36mUART: 9[0m
+[36mUART: 9[0m
+[36mUART: 9[0m
+[36mUART: 9[0m
+[36mUART: 1[0m
+[36mUART: 01[0m
+[36mUART: 01[0m
+[36mUART: 01[0m
+[36mUART: 11[0m
+[36mUART: 11[0m
+[36mUART: 11[0m
+[36mUART: 21[0m
+[36mUART: 21[0m
+[36mUART: 21[0m
+[36mUART: 31[0m
+[36mUART: 31[0m
+[36mUART: 31[0m
+[36mUART: 41[0m
+[36mUART: 41[0m
+[36mUART: 41[0m
+[36mUART: 51[0m
+[36mUART: 51[0m
+[36mUART: 51[0m
+[36mUART: 61[0m
+[36mUART: 61[0m
+[36mUART: 61[0m
+[36mUART: 71[0m
+[36mUART: 71[0m
+[36mUART: 71[0m
+[36mUART: 81[0m
+[36mUART: 81[0m
+[36mUART: 81[0m
+[36mUART: 91[0m
+[36mUART: 91[0m
+[36mUART: 9-[0m
+------ TRAP! ------- clock_counts =              1214679
 --- mem report ---
--- total mem access =               102335
- READ =                69414, WRITE =                32921
--- total instruction access =               247393
- READ =               247393, WRITE =                    0
+-- total mem access =               105036
+ READ =                71190, WRITE =                33846
+-- total instruction access =               267756
+ READ =               267756, WRITE =                    0
 - rtl/testbench.sv:63: Verilog $finish
 - S i m u l a t i o n   R e p o r t: Verilator 5.036 2025-04-27
-- Verilator: $finish at 11ms; walltime 12.280 s; speed 954.415 us/s
-- Verilator: cpu 11.974 s on 1 threads; alloced 25 MB
+- Verilator: $finish at 12ms; walltime 14.444 s; speed 1.024 ms/s
+- Verilator: cpu 11.868 s on 1 threads; alloced 25 MB
 make[1]: Leaving directory '/home/ignafede/ing-comp/fw-10-2026'
