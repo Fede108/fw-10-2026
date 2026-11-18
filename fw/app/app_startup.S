@@ -19,7 +19,6 @@
     .globl  __fw_header
     .type   __fw_header, @object
 __fw_header:
-<<<<<<< HEAD
     .word   FW_IMAGE_MAGIC          /* 0x00 magic "TP4F"                               */
     .word   __fw_start              /* 0x04 load_addr  (linker: dónde quedó linkeado)  */
     .word   __fw_size               /* 0x08 image_size (linker: app.ld)                */

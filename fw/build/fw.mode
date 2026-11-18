@@ -1,1 +1,1 @@
-APP_SRC=print.c test_fw_status.c APP_MARCH=rv32i CORRUPT= STANDALONE=
+APP_SRC=tests/test_adc2.c APP_MARCH=rv32i CORRUPT= STANDALONE=

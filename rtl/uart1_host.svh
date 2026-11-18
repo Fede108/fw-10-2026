@@ -255,7 +255,8 @@ task automatic expect_bytes();
 
     if (ok) begin
         script_pass($sformatf("recibido: %s", n > 16 ? $sformatf("%0d bytes", n) : exp_s));
-        for (int k = 0; k < n; k++) void'(rxq.pop_front());
+        //for (int k = 0; k < n; k++) void'(rxq.pop_front());
+        repeat (n) rxq.delete(0);
     end else begin
         if (rxq.size() < n)
             script_fail($sformatf("timeout esperando %0d bytes (llegaron %0d). esperado: %s recibido: %s",

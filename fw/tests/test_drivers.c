@@ -242,16 +242,16 @@ int main(void)
     REG_FW_REPORT = 0;
     f = 0;
 
-    w0();
-    w1();
-    w2();
+   // w0();
+   // w1();
+   // w2();
     w3();
     REG_FW_REPORT = f;
 
-    adc_read(&X[4], 256);
-    print_str("-- ADC data read --");
-    for (i = 0; i < 256; i++)
-        print_dec(X[4 + i]);
+  //  adc_read(&X[4], 256);
+  //  print_str("-- ADC data read --");
+  //  for (i = 0; i < 256; i++)
+  //      print_dec(X[4 + i]);
 
     REG_FW_STATUS = f ? 0xBAD : 0xFF;
     return 0;

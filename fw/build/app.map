@@ -1,21 +1,91 @@
 Archive member included to satisfy reference by file (symbol)
 
-/usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
-                              /tmp/ccfouINw.o (__mulsi3)
 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
-                              /tmp/ccx4hjb6.o (__udivsi3)
+                              /tmp/ccxWKAMR.o (__udivsi3)
 
 Discarded input sections
 
- .text          0x00000000        0x0 /tmp/ccBje4WI.o
- .data          0x00000000        0x0 /tmp/ccBje4WI.o
- .bss           0x00000000        0x0 /tmp/ccBje4WI.o
- .data          0x00000000        0x0 /tmp/ccx4hjb6.o
- .bss           0x00000000        0x0 /tmp/ccx4hjb6.o
- .data          0x00000000        0x0 /tmp/ccfouINw.o
- .bss           0x00000000        0x0 /tmp/ccfouINw.o
- .data          0x00000000        0x0 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
- .bss           0x00000000        0x0 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+ .text          0x00000000        0x0 /tmp/cc00yVIN.o
+ .data          0x00000000        0x0 /tmp/cc00yVIN.o
+ .bss           0x00000000        0x0 /tmp/cc00yVIN.o
+ .data          0x00000000        0x0 /tmp/ccxWKAMR.o
+ .bss           0x00000000        0x0 /tmp/ccxWKAMR.o
+ .data          0x00000000        0x0 /tmp/ccJpD4nM.o
+ .bss           0x00000000        0x0 /tmp/ccJpD4nM.o
+ .text          0x00000000       0x58 /tmp/ccevZgtT.o
+ .data          0x00000000        0x0 /tmp/ccevZgtT.o
+ .bss           0x00000000        0x0 /tmp/ccevZgtT.o
+ .debug_info    0x00000000      0x113 /tmp/ccevZgtT.o
+ .debug_abbrev  0x00000000       0xeb /tmp/ccevZgtT.o
+ .debug_aranges
+                0x00000000       0x20 /tmp/ccevZgtT.o
+ .debug_rnglists
+                0x00000000       0x13 /tmp/ccevZgtT.o
+ .debug_line    0x00000000      0x17a /tmp/ccevZgtT.o
+ .debug_str     0x00000000      0x112 /tmp/ccevZgtT.o
+ .debug_line_str
+                0x00000000       0xaf /tmp/ccevZgtT.o
+ .comment       0x00000000       0x23 /tmp/ccevZgtT.o
+ .debug_frame   0x00000000       0x40 /tmp/ccevZgtT.o
+ .riscv.attributes
+                0x00000000       0x1c /tmp/ccevZgtT.o
+ .text          0x00000000       0xec /tmp/cckVaW4r.o
+ .data          0x00000000        0x0 /tmp/cckVaW4r.o
+ .bss           0x00000000        0x0 /tmp/cckVaW4r.o
+ .debug_info    0x00000000      0x2ba /tmp/cckVaW4r.o
+ .debug_abbrev  0x00000000      0x196 /tmp/cckVaW4r.o
+ .debug_loclists
+                0x00000000      0x12a /tmp/cckVaW4r.o
+ .debug_aranges
+                0x00000000       0x20 /tmp/cckVaW4r.o
+ .debug_rnglists
+                0x00000000       0x24 /tmp/cckVaW4r.o
+ .debug_line    0x00000000      0x2f6 /tmp/cckVaW4r.o
+ .debug_str     0x00000000      0x15f /tmp/cckVaW4r.o
+ .debug_line_str
+                0x00000000       0xaf /tmp/cckVaW4r.o
+ .comment       0x00000000       0x23 /tmp/cckVaW4r.o
+ .debug_frame   0x00000000       0x90 /tmp/cckVaW4r.o
+ .riscv.attributes
+                0x00000000       0x1c /tmp/cckVaW4r.o
+ .text          0x00000000       0xbc /tmp/ccjGW6QH.o
+ .data          0x00000000        0x0 /tmp/ccjGW6QH.o
+ .bss           0x00000000        0x0 /tmp/ccjGW6QH.o
+ .debug_info    0x00000000      0x10e /tmp/ccjGW6QH.o
+ .debug_abbrev  0x00000000       0xa1 /tmp/ccjGW6QH.o
+ .debug_loclists
+                0x00000000       0x70 /tmp/ccjGW6QH.o
+ .debug_aranges
+                0x00000000       0x20 /tmp/ccjGW6QH.o
+ .debug_line    0x00000000      0x25f /tmp/ccjGW6QH.o
+ .debug_str     0x00000000      0x124 /tmp/ccjGW6QH.o
+ .debug_line_str
+                0x00000000       0xbb /tmp/ccjGW6QH.o
+ .comment       0x00000000       0x23 /tmp/ccjGW6QH.o
+ .debug_frame   0x00000000       0x40 /tmp/ccjGW6QH.o
+ .riscv.attributes
+                0x00000000       0x1c /tmp/ccjGW6QH.o
+ .text          0x00000000       0xf8 /tmp/cc2adL09.o
+ .data          0x00000000        0x0 /tmp/cc2adL09.o
+ .bss           0x00000000        0x0 /tmp/cc2adL09.o
+ .debug_info    0x00000000      0x21f /tmp/cc2adL09.o
+ .debug_abbrev  0x00000000      0x183 /tmp/cc2adL09.o
+ .debug_loclists
+                0x00000000       0xb2 /tmp/cc2adL09.o
+ .debug_aranges
+                0x00000000       0x20 /tmp/cc2adL09.o
+ .debug_rnglists
+                0x00000000       0x16 /tmp/cc2adL09.o
+ .debug_line    0x00000000      0x318 /tmp/cc2adL09.o
+ .debug_str     0x00000000      0x18f /tmp/cc2adL09.o
+ .debug_line_str
+                0x00000000       0xb5 /tmp/cc2adL09.o
+ .comment       0x00000000       0x23 /tmp/cc2adL09.o
+ .debug_frame   0x00000000       0xa0 /tmp/cc2adL09.o
+ .riscv.attributes
+                0x00000000       0x1c /tmp/cc2adL09.o
+ .text          0x00000000        0x0 /tmp/cc7R2iXx.o
+ .data          0x00000000        0x0 /tmp/cc7R2iXx.o
  .data          0x00000000        0x0 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
 
@@ -29,149 +99,180 @@ RAM              0x00020000         0x00020000         xrw
 
 Linker script and memory map
 
-LOAD /tmp/ccBje4WI.o
-LOAD /tmp/ccx4hjb6.o
-LOAD /tmp/ccfouINw.o
+LOAD /tmp/cc00yVIN.o
+LOAD /tmp/ccxWKAMR.o
+LOAD /tmp/ccJpD4nM.o
+LOAD /tmp/ccevZgtT.o
+LOAD /tmp/cckVaW4r.o
+LOAD /tmp/ccjGW6QH.o
+LOAD /tmp/cc2adL09.o
+LOAD /tmp/cc7R2iXx.o
 LOAD /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a
+                0x00000800                        __min_stack_size = 0x800
 
-.text           0x00001000      0x6d0
+.text           0x00001000      0x460
+                0x00001000                        __fw_start = .
  *(.fw_header)
- .fw_header     0x00001000       0x18 /tmp/ccBje4WI.o
+ .fw_header     0x00001000       0x18 /tmp/cc00yVIN.o
                 0x00001000                __fw_header
  *(.text .text.*)
  .text.Reset_Handler
-                0x00001018       0x64 /tmp/ccBje4WI.o
+                0x00001018       0x6c /tmp/cc00yVIN.o
                 0x00001018                Reset_Handler
- .text          0x0000107c      0x334 /tmp/ccx4hjb6.o
-                0x00001158                print_chr
-                0x00001194                print_str
-                0x000011fc                print_dec
-                0x000012e0                print_hex
-                0x00001394                print_flush_buffer
- .text          0x000013b0      0x200 /tmp/ccfouINw.o
-                0x000013b0                main
- .text          0x000015b0       0x24 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
-                0x000015b0                __mulsi3
- .text          0x000015d4       0xb4 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
-                0x000015d4                __divsi3
-                0x000015dc                __hidden___udivsi3
-                0x000015dc                __udivsi3
-                0x00001624                __umodsi3
-                0x00001658                __modsi3
- *(.rodata .rodata.*)
- .rodata        0x00001688       0x11 /tmp/ccx4hjb6.o
- *fill*         0x00001699        0x3 
- .rodata        0x0000169c       0x31 /tmp/ccfouINw.o
-                0x000016d0                        . = ALIGN (0x4)
- *fill*         0x000016cd        0x3 
-                0x000016d0                        _sidata = .
+ .text          0x00001084      0x1dc /tmp/ccxWKAMR.o
+                0x000010e4                print_chr
+                0x00001128                print_str
+                0x00001158                print_dec
+                0x000011f0                print_hex
+                0x0000125c                print_flush_buffer
+ .text          0x00001260       0x84 /tmp/ccJpD4nM.o
+                0x00001260                set_adc_clk_divider
+                0x0000126c                adc_start
+                0x00001278                adc_half_done
+                0x00001288                adc_done
+                0x0000129c                adc_read
+ .text.startup  0x000012e4       0x94 /tmp/cc7R2iXx.o
+                0x000012e4                main
+ .text          0x00001378       0xb4 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+                0x00001378                __divsi3
+                0x00001380                __hidden___udivsi3
+                0x00001380                __udivsi3
+                0x000013c8                __umodsi3
+                0x000013fc                __modsi3
+ *(.rodata .rodata.* .srodata .srodata.*)
+ .rodata.str1.4
+                0x0000142c       0x31 /tmp/ccxWKAMR.o
+                                 0x11 (size before relaxing)
+ .rodata.str1.4
+                0x0000145d       0x1d /tmp/cc7R2iXx.o
+                0x0000147c                        . = ALIGN (0x4)
+ *fill*         0x0000145d        0x3 
 
-.rela.dyn       0x000016d0        0x0
+.rela.dyn       0x00001460        0x0
  .rela.fw_header
-                0x000016d0        0x0 /tmp/ccBje4WI.o
+                0x00001460        0x0 /tmp/cc00yVIN.o
  .rela.text.Reset_Handler
-                0x000016d0        0x0 /tmp/ccBje4WI.o
+                0x00001460        0x0 /tmp/cc00yVIN.o
 
-.data           0x00020000        0x0 load address 0x000016d0
+.data           0x00020000        0x0 load address 0x00001460
+                0x00020000                        . = ALIGN (0x4)
                 0x00020000                        _sdata = .
- *(.data .data.*)
- *(.sdata .sdata.*)
+ *(.data .data.* .sdata .sdata.*)
+                0x00020000                        . = ALIGN (0x4)
                 0x00020000                        _edata = .
-                0x00020000                        _eidata = .
+                0x00001460                        _sidata = LOADADDR (.data)
 
-.bss            0x00020000        0xc load address 0x000016d0
+.bss            0x00020000      0x320 load address 0x00001460
+                0x00020000                        . = ALIGN (0x4)
                 0x00020000                        _sbss = .
- *(.bss .bss.*)
- *(.sbss .sbss.*)
- .sbss          0x00020000        0xc /tmp/ccfouINw.o
-                0x00020000                int_0
-                0x00020004                int_1
-                0x00020008                int_2
- *(COMMON)
-                0x0002000c                        _ebss = .
+ *(.bss .bss.* .sbss .sbss.* COMMON)
+ .bss           0x00020000      0x320 /tmp/cc7R2iXx.o
+                0x00020000                samples
+                0x00020190                samples2
+                0x00020320                        . = ALIGN (0x4)
+                0x00020320                        _ebss = .
 
 /DISCARD/
  *(.eh_frame .eh_frame_hdr)
                 0x00040000                        _stack_top = (ORIGIN (RAM) + LENGTH (RAM))
                 0x00001000                        __fw_start = ORIGIN (APP_ROM)
-                0x000016d0                        __fw_end = (_sidata + SIZEOF (.data))
-                0x000006d0                        __fw_size = (__fw_end - __fw_start)
-                0x00000001                        ASSERT (((SIZEOF (.bss) + SIZEOF (.data)) < LENGTH (RAM)), stack sin espacio)
+                0x00001460                        __fw_end = (_sidata + SIZEOF (.data))
+                0x00000460                        __fw_size = (__fw_end - __fw_start)
+                0x00000001                        ASSERT ((__fw_start == ORIGIN (APP_ROM)), TP4/FW: el header del FW tiene que quedar al principio de APP_ROM)
+                0x00000001                        ASSERT ((((SIZEOF (.bss) + SIZEOF (.data)) + __min_stack_size) <= _stack_top), stack sin espacio)
 OUTPUT(build/app.elf elf32-littleriscv)
 
 .riscv.attributes
                 0x00000000       0x1c
  .riscv.attributes
-                0x00000000       0x1a /tmp/ccBje4WI.o
+                0x00000000       0x1a /tmp/cc00yVIN.o
  .riscv.attributes
-                0x0000001a       0x1c /tmp/ccx4hjb6.o
+                0x0000001a       0x1c /tmp/ccxWKAMR.o
  .riscv.attributes
-                0x00000036       0x1c /tmp/ccfouINw.o
+                0x00000036       0x1c /tmp/ccJpD4nM.o
  .riscv.attributes
-                0x00000052       0x1a /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+                0x00000052       0x1c /tmp/cc7R2iXx.o
  .riscv.attributes
-                0x0000006c       0x1a /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+                0x0000006e       0x1a /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
 
 .comment        0x00000000       0x22
- .comment       0x00000000       0x22 /tmp/ccx4hjb6.o
+ .comment       0x00000000       0x22 /tmp/ccxWKAMR.o
                                  0x23 (size before relaxing)
- .comment       0x00000022       0x23 /tmp/ccfouINw.o
+ .comment       0x00000022       0x23 /tmp/ccJpD4nM.o
+ .comment       0x00000022       0x23 /tmp/cc7R2iXx.o
 
-.debug_line     0x00000000      0x698
- .debug_line    0x00000000       0xb6 /tmp/ccBje4WI.o
- .debug_line    0x000000b6      0x2b8 /tmp/ccx4hjb6.o
- .debug_line    0x0000036e      0x15d /tmp/ccfouINw.o
- .debug_line    0x000004cb       0x7a /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
- .debug_line    0x00000545      0x153 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+.debug_line     0x00000000      0x9da
+ .debug_line    0x00000000       0xbc /tmp/cc00yVIN.o
+ .debug_line    0x000000bc      0x4df /tmp/ccxWKAMR.o
+ .debug_line    0x0000059b      0x190 /tmp/ccJpD4nM.o
+ .debug_line    0x0000072b      0x15c /tmp/cc7R2iXx.o
+ .debug_line    0x00000887      0x153 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
 
 .debug_line_str
-                0x00000000      0x155
+                0x00000000      0x1a9
  .debug_line_str
-                0x00000000      0x155 /tmp/ccBje4WI.o
+                0x00000000      0x1a9 /tmp/cc00yVIN.o
                                  0x3f (size before relaxing)
  .debug_line_str
-                0x00000155       0x82 /tmp/ccx4hjb6.o
+                0x000001a9       0x82 /tmp/ccxWKAMR.o
  .debug_line_str
-                0x00000155       0xb3 /tmp/ccfouINw.o
+                0x000001a9       0xaf /tmp/ccJpD4nM.o
  .debug_line_str
-                0x00000155       0xa5 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+                0x000001a9       0xe8 /tmp/cc7R2iXx.o
  .debug_line_str
-                0x00000155       0xa2 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+                0x000001a9       0xa2 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
 
-.debug_info     0x00000000      0x350
- .debug_info    0x00000000       0x31 /tmp/ccBje4WI.o
- .debug_info    0x00000031      0x1c9 /tmp/ccx4hjb6.o
- .debug_info    0x000001fa       0xc6 /tmp/ccfouINw.o
- .debug_info    0x000002c0       0x31 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
- .debug_info    0x000002f1       0x5f /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+.debug_info     0x00000000      0x6a9
+ .debug_info    0x00000000       0x31 /tmp/cc00yVIN.o
+ .debug_info    0x00000031      0x31a /tmp/ccxWKAMR.o
+ .debug_info    0x0000034b      0x13b /tmp/ccJpD4nM.o
+ .debug_info    0x00000486      0x1c4 /tmp/cc7R2iXx.o
+ .debug_info    0x0000064a       0x5f /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
 
-.debug_abbrev   0x00000000      0x206
- .debug_abbrev  0x00000000       0x28 /tmp/ccBje4WI.o
- .debug_abbrev  0x00000028       0xe9 /tmp/ccx4hjb6.o
- .debug_abbrev  0x00000111       0xa5 /tmp/ccfouINw.o
- .debug_abbrev  0x000001b6       0x28 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
- .debug_abbrev  0x000001de       0x28 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+.debug_abbrev   0x00000000      0x411
+ .debug_abbrev  0x00000000       0x28 /tmp/cc00yVIN.o
+ .debug_abbrev  0x00000028      0x1c8 /tmp/ccxWKAMR.o
+ .debug_abbrev  0x000001f0       0xe5 /tmp/ccJpD4nM.o
+ .debug_abbrev  0x000002d5      0x114 /tmp/cc7R2iXx.o
+ .debug_abbrev  0x000003e9       0x28 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
 
 .debug_aranges  0x00000000       0xa0
  .debug_aranges
-                0x00000000       0x20 /tmp/ccBje4WI.o
+                0x00000000       0x20 /tmp/cc00yVIN.o
  .debug_aranges
-                0x00000020       0x20 /tmp/ccx4hjb6.o
+                0x00000020       0x20 /tmp/ccxWKAMR.o
  .debug_aranges
-                0x00000040       0x20 /tmp/ccfouINw.o
+                0x00000040       0x20 /tmp/ccJpD4nM.o
  .debug_aranges
-                0x00000060       0x20 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
+                0x00000060       0x20 /tmp/cc7R2iXx.o
  .debug_aranges
                 0x00000080       0x20 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
 
-.debug_str      0x00000000      0x232
- .debug_str     0x00000000      0x232 /tmp/ccBje4WI.o
+.debug_str      0x00000000      0x299
+ .debug_str     0x00000000      0x299 /tmp/cc00yVIN.o
                                  0x59 (size before relaxing)
- .debug_str     0x00000232       0xb8 /tmp/ccx4hjb6.o
- .debug_str     0x00000232       0x8f /tmp/ccfouINw.o
- .debug_str     0x00000232       0xba /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(muldi3.o)
- .debug_str     0x00000232       0xe7 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+ .debug_str     0x00000299       0xe3 /tmp/ccxWKAMR.o
+ .debug_str     0x00000299      0x140 /tmp/ccJpD4nM.o
+ .debug_str     0x00000299      0x13c /tmp/cc7R2iXx.o
+ .debug_str     0x00000299       0xe7 /usr/lib/gcc/riscv64-unknown-elf/13.2.0/rv32i/ilp32/libgcc.a(div.o)
+
+.debug_loclists
+                0x00000000      0x221
+ .debug_loclists
+                0x00000000      0x1c8 /tmp/ccxWKAMR.o
+ .debug_loclists
+                0x000001c8       0x43 /tmp/ccJpD4nM.o
+ .debug_loclists
+                0x0000020b       0x16 /tmp/cc7R2iXx.o
+
+.debug_rnglists
+                0x00000000       0x30
+ .debug_rnglists
+                0x00000000       0x1c /tmp/ccxWKAMR.o
+ .debug_rnglists
+                0x0000001c       0x14 /tmp/cc7R2iXx.o
 
 .debug_frame    0x00000000      0x130
- .debug_frame   0x00000000       0xf8 /tmp/ccx4hjb6.o
- .debug_frame   0x000000f8       0x38 /tmp/ccfouINw.o
+ .debug_frame   0x00000000       0x98 /tmp/ccxWKAMR.o
+ .debug_frame   0x00000098       0x60 /tmp/ccJpD4nM.o
+ .debug_frame   0x000000f8       0x38 /tmp/cc7R2iXx.o
