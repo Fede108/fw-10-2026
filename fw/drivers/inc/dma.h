@@ -4,6 +4,6 @@
 #include <stdint.h>
 
 void dma_init(void);
-void dma_copy(const void *src, void *dst, uint32_t n_words);
+int dma_copy(const void *src, void *dst, uint32_t n_words);
 uint8_t dma_is_done(void);
 
