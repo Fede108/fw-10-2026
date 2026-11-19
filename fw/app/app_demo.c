@@ -32,8 +32,6 @@ void main()
 
     for(uint8_t i=0; i<N; i++){
 
-    //    led_set_mask(dst_arr[i] >> 24);
-
         if(dst_arr[i] > UMBRAL_2_4V && flag){
             flag = 0;
             uart_write_str("señal supera 2.4v");
