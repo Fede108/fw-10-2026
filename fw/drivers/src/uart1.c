@@ -1,11 +1,11 @@
 /* Driver de la UART1 serie.
  *
- * HITO 3.b: completar los cuerpos marcados con TODO usando los registros de
+ * Punto 3.b del TP5: completar los cuerpos marcados con TODO usando los registros de
  *         datasheets/UART1_DATASHEET.md (REG_UART1_*, definidos en config.h).
  * TP6: completar uart1_set_rts().
  *
- * Hoy los cuerpos no hacen nada (solo para que el proyecto compile): el check
- * del hito 3.b tiene que fallar hasta que los implementes.
+ * Hoy los cuerpos no hacen nada (solo para que el proyecto compile): make
+ * test_uart_serial tiene que fallar hasta que los implementes.
  */
 #include "uart1.h"
 
@@ -25,7 +25,7 @@ uint32_t uart1_rx_level(void)
 
 int uart1_getc(uint8_t *b)
 {
-    /* TODO hito 3.b: leer RX_DATA (leer saca un byte del FIFO) y devolver 1 si el
+    /* TODO 3.b: leer RX_DATA (leer saca un byte del FIFO) y devolver 1 si el
      * bit VALID estaba en 1. Si no, devolver 0 sin tocar *b. */
     
     uint16_t rx_data = REG_UART1_RX_DATA;
